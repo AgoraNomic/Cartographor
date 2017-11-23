@@ -1,0 +1,20 @@
+#map {
+	border-collapse: collapse;
+}
+
+.cell {
+	width: 1em;
+	height: 1em;
+}
+
+.cell[type=a] {
+	background-color: #999;
+}
+
+.cell[type=b] {
+	background-color: #222;
+}
+
+.cell[type=w] {
+	background-color: #eee;
+}
