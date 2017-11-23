@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <head>
   <title>The Map of Arcadia</title>
-  <link rel='stylesheet' href='css/master.css'>
+  <link rel='stylesheet' href='master.css'>
+  <script src='stats.js'></script>
 </head>
 <body>
   <h1>The Map of Arcadia</h1>
   <table id='map' border='1'>
     <tr class='row' id='r0'>
-      <td class='cell a' id='r0c0'></td>
-      <td class='cell a' id='r0c1'></td>
-      <td class='cell a' id='r0c2'></td>
-      <td class='cell b' id='r0c3'></td>
-      <td class='cell b' id='r0c4'></td>
-      <td class='cell w' id='r0c5'></td>
-      <td class='cell a' id='r0c6'></td>
-      <td class='cell a' id='r0c7'></td>
-      <td class='cell a' id='r0c8'></td>
+      <td class='cell' id='r0c0' type='a' onmouseover='getStats(0, 0)'></td>
+      <td class='cell' id='r0c1' type='a' onmouseover='getStats(1, 0)'></td>
+      <td class='cell' id='r0c2' type='a' onmouseover='getStats(2, 0)'></td>
+      <td class='cell' id='r0c3' type='b' onmouseover='getStats(3, 0)'></td>
+      <td class='cell' id='r0c4' type='b' onmouseover='getStats(4, 0)'></td>
+      <td class='cell' id='r0c5' type='w' onmouseover='getStats(5, 0)'></td>
+      <td class='cell' id='r0c6' type='a' onmouseover='getStats(6, 0)'></td>
+      <td class='cell' id='r0c7' type='a' onmouseover='getStats(7, 0)'></td>
+      <td class='cell' id='r0c8' type='a' onmouseover='getStats(8, 0)'></td>
     </tr>
     <tr class='row' id='r1'>
-      <td class='cell a' id='r1c0'></td>
-      <td class='cell a' id='r1c1'></td>
-      <td class='cell b' id='r1c2'></td>
-      <td class='cell b' id='r1c3'></td>
-      <td class='cell b' id='r1c4'></td>
-      <td class='cell w' id='r1c5'></td>
-      <td class='cell w' id='r1c6'></td>
-      <td class='cell a' id='r1c7'></td>
-      <td class='cell w' id='r1c8'></td>
+      <td class='cell' id='r1c0' type='a' onmouseover='getStats(0, 1)'></td>
+      <td class='cell' id='r1c1' type='a' onmouseover='getStats(1, 1)'></td>
+      <td class='cell' id='r1c2' type='b' onmouseover='getStats(2, 1)'></td>
+      <td class='cell' id='r1c3' type='b' onmouseover='getStats(3, 1)'></td>
+      <td class='cell' id='r1c4' type='b' onmouseover='getStats(4, 1)'></td>
+      <td class='cell' id='r1c5' type='w' onmouseover='getStats(5, 1)'></td>
+      <td class='cell' id='r1c6' type='w' onmouseover='getStats(6, 1)'></td>
+      <td class='cell' id='r1c7' type='a' onmouseover='getStats(7, 1)'></td>
+      <td class='cell' id='r1c8' type='w' onmouseover='getStats(8, 1)'></td>
     </tr>
     <tr class='row' id='r2'>
-      <td class='cell a' id='r2c0'></td>
-      <td class='cell b' id='r2c1'></td>
-      <td class='cell b' id='r2c2'></td>
-      <td class='cell a' id='r2c3'></td>
-      <td class='cell a' id='r2c4'></td>
-      <td class='cell a' id='r2c5'></td>
-      <td class='cell w' id='r2c6'></td>
-      <td class='cell a' id='r2c7'></td>
-      <td class='cell a' id='r2c8'></td>
+      <td class='cell' id='r2c0' type='a' onmouseover='getStats(0, 2)'></td>
+      <td class='cell' id='r2c1' type='b' onmouseover='getStats(1, 2)'></td>
+      <td class='cell' id='r2c2' type='b' onmouseover='getStats(2, 2)'></td>
+      <td class='cell' id='r2c3' type='a' onmouseover='getStats(3, 2)'></td>
+      <td class='cell' id='r2c4' type='a' onmouseover='getStats(4, 2)'></td>
+      <td class='cell' id='r2c5' type='a' onmouseover='getStats(5, 2)'></td>
+      <td class='cell' id='r2c6' type='w' onmouseover='getStats(6, 2)'></td>
+      <td class='cell' id='r2c7' type='a' onmouseover='getStats(7, 2)'></td>
+      <td class='cell' id='r2c8' type='a' onmouseover='getStats(8, 2)'></td>
     </tr>
     <tr class='row' id='r3'>
-      <td class='cell a' id='r3c0'></td>
-      <td class='cell a' id='r3c1'></td>
-      <td class='cell a' id='r3c2'></td>
-      <td class='cell a' id='r3c3'></td>
-      <td class='cell b' id='r3c4'></td>
-      <td class='cell b' id='r3c5'></td>
-      <td class='cell b' id='r3c6'></td>
-      <td class='cell w' id='r3c7'></td>
-      <td class='cell w' id='r3c8'></td>
+      <td class='cell' id='r3c0' type='a' onmouseover='getStats(0, 3)'></td>
+      <td class='cell' id='r3c1' type='a' onmouseover='getStats(1, 3)'></td>
+      <td class='cell' id='r3c2' type='a' onmouseover='getStats(2, 3)'></td>
+      <td class='cell' id='r3c3' type='a' onmouseover='getStats(3, 3)'></td>
+      <td class='cell' id='r3c4' type='b' onmouseover='getStats(4, 3)'></td>
+      <td class='cell' id='r3c5' type='b' onmouseover='getStats(5, 3)'></td>
+      <td class='cell' id='r3c6' type='b' onmouseover='getStats(6, 3)'></td>
+      <td class='cell' id='r3c7' type='w' onmouseover='getStats(7, 3)'></td>
+      <td class='cell' id='r3c8' type='w' onmouseover='getStats(8, 3)'></td>
     </tr>
     <tr class='row' id='r4'>
-      <td class='cell a' id='r4c0'></td>
-      <td class='cell w' id='r4c1'></td>
-      <td class='cell w' id='r4c2'></td>
-      <td class='cell b' id='r4c3'></td>
-      <td class='cell b' id='r4c4'></td>
-      <td class='cell w' id='r4c5'></td>
-      <td class='cell w' id='r4c6'></td>
-      <td class='cell w' id='r4c7'></td>
-      <td class='cell a' id='r4c8'></td>
+      <td class='cell' id='r4c0' type='a' onmouseover='getStats(0, 4)'></td>
+      <td class='cell' id='r4c1' type='w' onmouseover='getStats(1, 4)'></td>
+      <td class='cell' id='r4c2' type='w' onmouseover='getStats(2, 4)'></td>
+      <td class='cell' id='r4c3' type='b' onmouseover='getStats(3, 4)'></td>
+      <td class='cell' id='r4c4' type='b' onmouseover='getStats(4, 4)'></td>
+      <td class='cell' id='r4c5' type='w' onmouseover='getStats(5, 4)'></td>
+      <td class='cell' id='r4c6' type='w' onmouseover='getStats(6, 4)'></td>
+      <td class='cell' id='r4c7' type='w' onmouseover='getStats(7, 4)'></td>
+      <td class='cell' id='r4c8' type='a' onmouseover='getStats(8, 4)'></td>
     </tr>
     <tr class='row' id='r5'>
-      <td class='cell w' id='r5c0'></td>
-      <td class='cell w' id='r5c1'></td>
-      <td class='cell b' id='r5c2'></td>
-      <td class='cell a' id='r5c3'></td>
-      <td class='cell a' id='r5c4'></td>
-      <td class='cell a' id='r5c5'></td>
-      <td class='cell a' id='r5c6'></td>
-      <td class='cell b' id='r5c7'></td>
-      <td class='cell b' id='r5c8'></td>
+      <td class='cell' id='r5c0' type='w' onmouseover='getStats(0, 5)'></td>
+      <td class='cell' id='r5c1' type='w' onmouseover='getStats(1, 5)'></td>
+      <td class='cell' id='r5c2' type='b' onmouseover='getStats(2, 5)'></td>
+      <td class='cell' id='r5c3' type='a' onmouseover='getStats(3, 5)'></td>
+      <td class='cell' id='r5c4' type='a' onmouseover='getStats(4, 5)'></td>
+      <td class='cell' id='r5c5' type='a' onmouseover='getStats(5, 5)'></td>
+      <td class='cell' id='r5c6' type='a' onmouseover='getStats(6, 5)'></td>
+      <td class='cell' id='r5c7' type='b' onmouseover='getStats(7, 5)'></td>
+      <td class='cell' id='r5c8' type='b' onmouseover='getStats(8, 5)'></td>
     </tr>
     <tr class='row' id='r6'>
-      <td class='cell w' id='r6c0'></td>
-      <td class='cell a' id='r6c1'></td>
-      <td class='cell a' id='r6c2'></td>
-      <td class='cell a' id='r6c3'></td>
-      <td class='cell a' id='r6c4'></td>
-      <td class='cell w' id='r6c5'></td>
-      <td class='cell w' id='r6c6'></td>
-      <td class='cell w' id='r6c7'></td>
-      <td class='cell w' id='r6c8'></td>
+      <td class='cell' id='r6c0' type='w' onmouseover='getStats(0, 6)'></td>
+      <td class='cell' id='r6c1' type='a' onmouseover='getStats(1, 6)'></td>
+      <td class='cell' id='r6c2' type='a' onmouseover='getStats(2, 6)'></td>
+      <td class='cell' id='r6c3' type='a' onmouseover='getStats(3, 6)'></td>
+      <td class='cell' id='r6c4' type='a' onmouseover='getStats(4, 6)'></td>
+      <td class='cell' id='r6c5' type='w' onmouseover='getStats(5, 6)'></td>
+      <td class='cell' id='r6c6' type='w' onmouseover='getStats(6, 6)'></td>
+      <td class='cell' id='r6c7' type='w' onmouseover='getStats(7, 6)'></td>
+      <td class='cell' id='r6c8' type='w' onmouseover='getStats(8, 6)'></td>
     </tr>
     <tr class='row' id='r7'>
-      <td class='cell a' id='r7c0'></td>
-      <td class='cell a' id='r7c1'></td>
-      <td class='cell b' id='r7c2'></td>
-      <td class='cell b' id='r7c3'></td>
-      <td class='cell a' id='r7c4'></td>
-      <td class='cell b' id='r7c5'></td>
-      <td class='cell b' id='r7c6'></td>
-      <td class='cell b' id='r7c7'></td>
-      <td class='cell b' id='r7c8'></td>
+      <td class='cell' id='r7c0' type='a' onmouseover='getStats(0, 7)'></td>
+      <td class='cell' id='r7c1' type='a' onmouseover='getStats(1, 7)'></td>
+      <td class='cell' id='r7c2' type='b' onmouseover='getStats(2, 7)'></td>
+      <td class='cell' id='r7c3' type='b' onmouseover='getStats(3, 7)'></td>
+      <td class='cell' id='r7c4' type='a' onmouseover='getStats(4, 7)'></td>
+      <td class='cell' id='r7c5' type='b' onmouseover='getStats(5, 7)'></td>
+      <td class='cell' id='r7c6' type='b' onmouseover='getStats(6, 7)'></td>
+      <td class='cell' id='r7c7' type='b' onmouseover='getStats(7, 7)'></td>
+      <td class='cell' id='r7c8' type='b' onmouseover='getStats(8, 7)'></td>
     </tr>
     <tr class='row' id='r8'>
-      <td class='cell a' id='r8c0'></td>
-      <td class='cell a' id='r8c1'></td>
-      <td class='cell b' id='r8c2'></td>
-      <td class='cell a' id='r8c3'></td>
-      <td class='cell a' id='r8c4'></td>
-      <td class='cell a' id='r8c5'></td>
-      <td class='cell b' id='r8c6'></td>
-      <td class='cell b' id='r8c7'></td>
-      <td class='cell a' id='r8c8'></td>
+      <td class='cell' id='r8c0' type='a' onmouseover='getStats(0, 8)'></td>
+      <td class='cell' id='r8c1' type='a' onmouseover='getStats(1, 8)'></td>
+      <td class='cell' id='r8c2' type='b' onmouseover='getStats(2, 8)'></td>
+      <td class='cell' id='r8c3' type='a' onmouseover='getStats(3, 8)'></td>
+      <td class='cell' id='r8c4' type='a' onmouseover='getStats(4, 8)'></td>
+      <td class='cell' id='r8c5' type='a' onmouseover='getStats(5, 8)'></td>
+      <td class='cell' id='r8c6' type='b' onmouseover='getStats(6, 8)'></td>
+      <td class='cell' id='r8c7' type='b' onmouseover='getStats(7, 8)'></td>
+      <td class='cell' id='r8c8' type='a' onmouseover='getStats(8, 8)'></td>
     </tr>
 
   </table>
-  <div id='stats'>
-    {{statslist}}
-  </div>
+  <div id='stats'></div>
 </body>

@@ -12,7 +12,7 @@ table_html = ""
 for i, o in enumerate(table_data):
     table_html += "    <tr class='row' id='r%d'>\n" % (i)
     for j, p in enumerate(o):
-        table_html += "      <td class='cell %s' id='r%dc%d'></td>\n" % (p, i, j)
+        table_html += "      <td class='cell' id='r%dc%d' type='%s' onmouseover='getStats(%d, %d)'></td>\n" % (i, j, p, j, i)
     table_html += "    </tr>\n"
 
 html = html.replace("{{tabledata}}", table_html)
