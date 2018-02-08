@@ -1,4 +1,7 @@
 import json
+from datetime import datetime as dt
+
+date = dt.now().date()
 
 def get_contents(fn):
     with open(fn) as f:
@@ -18,8 +21,6 @@ for i in range(0, 9):
 table_list = table_html.split("\n")
 cell_list = [i-1 for i, j in enumerate(table_list) if j.find("</td>") != -1]
 
-print(cell_list)
-
 for attr, i in table_data.items():
     for row, j in enumerate(i):
         for col, k in enumerate(j):
@@ -29,5 +30,5 @@ table_html = "\n".join(table_list)
 
 html = html.replace("{{tabledata}}", table_html)
 
-with open("map.html", "w") as f:
+with open("maps/map-%s.html" % (date.isoformat()), "w") as f:
     f.write(html)
