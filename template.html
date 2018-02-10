@@ -1,8 +1,39 @@
 <!DOCTYPE html>
 <head>
   <title>The Map of Arcadia</title>
-  <link rel='stylesheet' href='master.css'>
-  <script src='stats.js'></script>
+  <style>
+  	#map {
+  		border-collapse: collapse;
+  	}
+  	
+  	.cell {
+  		width: 20px;
+  		height: 20px;
+  	}
+  	
+  	.cell[type=a] {
+  		background-color: #999;
+  	}
+  	
+  	.cell[type=b] {
+  		background-color: #222;
+  	}
+  	
+  	.cell[type=w] {
+  		background-color: #eee;
+  	}
+  </style>
+  <script>
+  	var stats = ["owner", "type", "fac", "rank"];
+  	
+  	function getStats(x, y) {
+  		s = document.getElementById("stats");
+  		s.innerHTML = "lat: " + y + "<br>long: " + x + "<br>";
+  		for (var i = 0; i < stats.length; i++) {
+  			s.innerHTML += stats[i] + ": " + document.getElementById("r" + y + "c" + x).getAttribute(stats[i]) + "<br>";
+  		}
+  	}
+  </script>
 </head>
 <body>
   <h1>The Map of Arcadia</h1>

@@ -1,30 +1,48 @@
 import json
 from datetime import datetime as dt
 
+# get the date for the generated html file name
 date = dt.now().date()
 
+# function to get the contents of a file
 def get_contents(fn):
     with open(fn) as f:
         return f.read()
 
-html = get_contents("template.html")
-table_data = json.loads(get_contents("data/map.json"))
+html = get_contents("template.html") # get the template file
+changes = [i for i in json.loads(get_contents("data/changes.json")) if type(i) != type("")] # get all recorded changes
+defaults = json.loads(get_contents("data/defaults.json")) # get the stats to track and their default values
 
-table_html = ""
+table_html = "" # this contains html code that will be injected into the file
+table_data = [] # this will contain dictionaries that describe each square
 
-for i in range(0, 9):
-    table_html += "    <tr class='row' id='r%d'>\n      " % (i)
-    for j in range(0, 9):
-        table_html += "<td class='cell' id='r%dc%d' onmouseover='getStats(%d, %d)'\n      ></td>" % (i, j, j, i)
+# prepares the table_html and table_data variables with 19x19 grids filled with default values
+for row in range(-9, 10):
+    table_html += "    <tr class='row' id='r%d'>\n      " % row
+    table_data.append([])
+    for col in range(-9, 10):
+        table_html += "<td class='cell' id='r%dc%d' onmouseover='getStats(%d, %d)'\n      ></td>" % (row, col, col, row)
+        table_data[row+9].append(defaults.copy())
     table_html += "</tr>\n"
 
-table_list = table_html.split("\n")
-cell_list = [i-1 for i, j in enumerate(table_list) if j.find("</td>") != -1]
+# uses data/changes.json to update the map to its current state
+for change in changes:
+    row = change["coords"][0]+9
+    col = change["coords"][1]+9
+    for attr, value in change.items():
+        if attr != "coords":
+            table_data[row][col][attr] = value
 
-for attr, i in table_data.items():
-    for row, j in enumerate(i):
-        for col, k in enumerate(j):
-            table_list[cell_list[row*9+col]] += " %s='%s'" % (attr, k)
+table_list = table_html.split("\n") # get a list of lines to make searching easier
+cell_list = [i-1 for i, j in enumerate(table_list) if j.find("</td>") != -1] # get the numbers of the lines we want to add to
+
+# print(len(table_list))
+
+# generate html for table 
+for row, i in enumerate(table_data):
+    for col, j in enumerate(i):
+        for attr, k in j.items():
+            table_list[cell_list[row*19+col]] += " %s='%s'" % (attr, k)
 
 table_html = "\n".join(table_list)
 
