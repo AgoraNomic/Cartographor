@@ -34,13 +34,16 @@ for change in changes:
     if command == "track":
         to_track.append(args["name"])
         defaults[args["name"]] = args["default"]
+
+    elif command == "untrack":
+        to_track.pop(to_track.index(args["name"]))
+        defaults.pop(args["name"])
     
     elif command == "set":
         row = args["coords"][0]+9
         col = args["coords"][1]+9
         for attr, value in args.items():
-            if attr != "coords":
-                table_data[row][col][attr] = value
+            if attr != "coords": table_data[row][col][attr] = value
 
 # add values that are still default
 for row in table_data:
