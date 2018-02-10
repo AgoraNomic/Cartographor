@@ -24,20 +24,26 @@ for row in range(-9, 10):
         table_data[row+9].append({})
     table_html += "</tr>\n"
 
-to_track = [] # this will store all the values we want to track, as set by the "track" command.
-defaults = {} # this will hold the default values of the values in to_track.
+to_track = [] # this will store all the values we want to track, as set by the "track" command
+defaults = {} # this will hold the default values of the values in to_track
+displays = {} # this will hold the display names for the values in to_track
 
 # uses data/changes.json to update the map to its current state
 for change in changes:
     command = change[0]
     args = change[1]
     if command == "track":
-        to_track.append(args["name"])
-        defaults[args["name"]] = args["default"]
+        name = args["name"]
+        to_track.append(name)
+        defaults[name] = args["default"]
+        try: displays[name] = args["display"]
+        except KeyError: displays[name] = name
 
     elif command == "untrack":
-        to_track.pop(to_track.index(args["name"]))
-        defaults.pop(args["name"])
+        name = args["name"]
+        to_track.pop(to_track.index(name))
+        defaults.pop(name)
+        displays.pop(name)
     
     elif command == "set":
         row = args["coords"][0]+9
@@ -65,11 +71,9 @@ for row, i in enumerate(table_data):
 table_html = "\n".join(table_list)
 html = html.replace("{{tabledata}}", table_html)
 
-# add the values we're tracking to the template.
-# this method allows us to change which attributes we want to track simply by editing data/defaults.json.
-to_track = []
-for attr, value in defaults.items(): to_track.append(attr)
+# add the values we're tracking to the template
 html = html.replace("{{attributes}}", str(to_track))
+html = html.replace("{{dispnames}}", str([j for i,j in displays.items()]))
 
 with open("maps/map-%s.html" % (date.isoformat()), "w") as f:
     f.write(html)
