@@ -35,11 +35,17 @@ for change in changes:
     args = change[1]
     if command == "track":
         to_track.append(args)
+        try: args["display"]
+        except KeyError: args["display"] = args["name"]
     
     elif command == "untrack":
         for index, attr in enumerate(to_track):
-            if attr["name"] = args["name"]:
+            if attr["name"] == args["name"]:
                 to_track.pop(index)
+        for row in table_data:
+            for col in row:
+                try: col.pop(args["name"])
+                except: pass
         
     elif command == "set":
         row = args["coords"][0]+9
