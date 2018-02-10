@@ -44,9 +44,15 @@ for row, i in enumerate(table_data):
         for attr, k in j.items():
             table_list[cell_list[row*19+col]] += " %s='%s'" % (attr, k)
 
+# add the generated table html to the template
 table_html = "\n".join(table_list)
-
 html = html.replace("{{tabledata}}", table_html)
+
+# add the values we're tracking to the template.
+# this method allows us to change which attributes we want to track simply by editing data/defaults.json.
+to_track = []
+for attr, value in defaults.items(): to_track.append(attr)
+html = html.replace("{{attributes}}", str(to_track))
 
 with open("maps/map-%s.html" % (date.isoformat()), "w") as f:
     f.write(html)
