@@ -130,5 +130,8 @@ html = html.replace("{{tabledata}}", table_html)
 html = html.replace("{{attributes}}", str([j["name"] for i,j in enumerate(to_track)]))
 html = html.replace("{{dispnames}}", str([j["display"] for i,j in enumerate(to_track)]))
 
+# add dates
+html = html.replace("{{date}}", date.isoformat())
+
 with open("maps/map-%s.html" % (date.isoformat()), "w") as f:
     f.write(html)
