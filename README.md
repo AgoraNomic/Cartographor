@@ -1,6 +1,6 @@
 # Cartographor's Report Generator
 
-For [http://agoranomic.org](Agora Nomic).
+For [Agora Nomic](http://agoranomic.org).
 
 This repository generates HTML files and (soon) text files that track
 the Map of the Land of Arcadia for the Cartographor. Soon, the

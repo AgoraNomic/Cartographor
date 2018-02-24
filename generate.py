@@ -85,8 +85,6 @@ for change in changes:
         max_row = max_lat - min_lat + 1
         max_col = max_lon - min_lon + 1
 
-        print(max_row, max_col)
-
         table_data = table_data[:max_row]
         for row in range(max_row):
             try: table_data[row]
