@@ -17,6 +17,7 @@ table_html = "" # this contains html code that will be injected into the file
 table_data = [] # this will contain dictionaries that describe each square
 
 to_track = [] # this will store all the values we want to track, as set by the "track" command
+conditions = {}
 
 # these are the lowest possible latitude and longitude values.
 min_lat = 0
@@ -46,8 +47,9 @@ def create_initials(long_names):
 
 # uses data/changes.json to update the map to its current state
 for change in changes:
-    command = change[0]
-    args = change[1]
+    command, args = change
+    
+    
     if command == "track":
         to_track.append(args)
         try: args["display"]

@@ -1,0 +1,26 @@
+batch: by Proposal 8014, date 2018-02-23, link https//tinyurl.com/y99kjvxv
+	resize: min_lat -6, max_lat 6, min_lon -6, max_lon 6
+	track owner: default Agora
+	track type: default a
+	track pres: default false, display preservation
+	track fac: default null, display facility
+	track rank: default 0, display facility rank
+	activate alttype
+	batch: type w
+		set -1 -2 
+		set -1 -1: pres true, fac mine, rank 1
+		set -1  0: pres true,
+		set  0 -2 
+		set  0 -1: pres true
+		set  1 -2 
+		set  1 -1: pres true, fac farm, rank 1
+	batch: type b
+		set -1  1: pres true, fac orchard, rank 1
+		set -1  2 
+		set  0  0: pres true
+		set  0  1: pres true
+		set  0  2 
+		set  1  0: pres true
+		set  1  1: pres true, fac mine, rank 1
+		set  1  2 
+report 2018-02-24
