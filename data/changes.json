@@ -20,5 +20,10 @@
 	["set", {"coords": [ 1, -1], "type": "w", "pres": true, "fac": "farm", "rank": 1}],
 	["set", {"coords": [ 1,  0], "type": "b", "pres": true}],
 	["set", {"coords": [ 1,  1], "type": "b", "pres": true, "fac": "mine", "rank": 1}],
-	["set", {"coords": [ 1,  2], "type": "b"}]
+	["set", {"coords": [ 1,  2], "type": "b"}],
+	["set", {"coords": [-1, -2], "owner": "Trigon"}],
+	["set", {"coords": [ 0, -2], "owner": "Cuddlebeam"}],
+	["set", {"coords": [ 1, -2], "owner": "Cuddlebeam"}],
+	["set", {"coords": [-1,  2], "owner": "Cuddlebeam"}],
+	["set", {"coords": [ 0,  2], "owner": "Cuddlebeam"}]
 ]
