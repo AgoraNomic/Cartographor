@@ -1,6 +1,6 @@
-import json
 from datetime import datetime as dt
 from re import sub
+import fractal
 
 # get the date for the generated html file name
 date = dt.now().date()
@@ -11,7 +11,7 @@ def get_contents(fn):
         return f.read()
 
 html = get_contents("template.html") # get the template file
-changes = [i for i in json.loads(get_contents("data/changes.json")) if type(i) != type("")] # get all recorded changes
+changes = [i for i in fractal.load(get_contents("data/changes.fr")) if type(i) != type("")] # get all recorded changes
 
 table_html = "" # this contains html code that will be injected into the file
 table_data = [] # this will contain dictionaries that describe each square
@@ -45,43 +45,44 @@ def create_initials(long_names):
                 found = True
     return initials
 
-# uses data/changes.json to update the map to its current state
+# uses data/changes.fr to update the map to its current state
 for change in changes:
-    command, args = change
-    
+    try: command, pargs, args = change
+    except ValueError: command, args = change
     
     if command == "track":
-        to_track.append(args)
+        args["name"] = pargs[0]
         try: args["display"]
-        except KeyError: args["display"] = args["name"]
+        except KeyError: args["display"] = pargs[0]
+        to_track.append(args)
     
     elif command == "untrack":
         for index, attr in enumerate(to_track):
-            if attr["name"] == args["name"]:
+            if attr["name"] == pargs[0]:
                 to_track.pop(index)
         for row in table_data:
             for col in row:
-                try: col.pop(args["name"])
-                except: pass
+                try: col.pop(pargs[0])
+                except KeyError: pass
         
     elif command == "set":
-        row = args["coords"][0]-min_lat
-        col = args["coords"][1]-min_lon
+        row = int(pargs[0])-min_lat
+        col = int(pargs[1])-min_lon
         for attr, value in args.items():
-            if attr != "coords": table_data[row][col][attr] = value
+            table_data[row][col][attr] = value
         try:
             if args["type"] == "a":
                 table_data[row][col] = {}
         except: pass
 
     elif command == "resize":
-        try: min_lat = args["min_lat"]
+        try: min_lat = int(args["min_lat"])
         except: pass
-        try: min_lon = args["min_lon"]
+        try: min_lon = int(args["min_lon"])
         except: pass
-        try: max_lat = args["max_lat"]
+        try: max_lat = int(args["max_lat"])
         except: pass
-        try: max_lon = args["max_lon"]
+        try: max_lon = int(args["max_lon"])
         except: pass
         
         max_row = max_lat - min_lat + 1
@@ -110,7 +111,7 @@ for row, i in enumerate(table_data):
     table_html += "    <tr class='row' id='r%d'>\n      " % lat
     for col,j in enumerate(i):
         lon = col + min_lon
-        table_html += "<td class='cell' id='r%dc%d' onmouseover='getStats(%d, %d)'\n      ></td>" % (lat, lon, lon, lat)
+        table_html += "<td class='cell' id='r%dc%d' onclick='getStats(%d, %d)'\n      ></td>" % (lat, lon, lon, lat)
     table_html += "</tr>\n"
 
 table_list = table_html.split("\n") # get a list of lines to make searching easier

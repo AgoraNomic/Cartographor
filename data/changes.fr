@@ -1,10 +1,13 @@
-batch: by Proposal 8014, date 2018-02-23, link https//tinyurl.com/y99kjvxv
+batch: by Proposal 8014, date 2018-02-23, link tinyurl.com/y99kjvxv
 	resize: min_lat -6, max_lat 6, min_lon -6, max_lon 6
 	track owner: default Agora
 	track type: default a
 	track pres: default false, display preservation
 	track fac: default null, display facility
 	track rank: default 0, display facility rank
+	track date: default 2018-02-23, display latest modification
+	track by: default Agora, display last change by
+	track link: default /, display link to last change
 	activate alttype
 	batch: type w
 		set -1 -2 

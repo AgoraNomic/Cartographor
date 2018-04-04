@@ -1,30 +1,33 @@
 def load(str):
 
-    active_batches = []
-    
+    batches = []
+
+    # split the file into lines, then sides.
     list = [arg.split(":") for arg in str.split("\n")]
 
+    # this will hold json code.
     data = []
 
     for line in list:
-        indent_level = line[0].count("\t")
-        line_data = []
-        try: line_data = [arg.split() for arg in line[0].split(",")]
+        indent_level = line[0].count("\t") # necessary for batches.
+        line_data = [] # holds json for individual lines.
+        try: line_data = [arg.split() for arg in line[0].split(",")] # split left side into arguments, then individual words.
         except IndexError: pass
+        line_data = [line_data[0].pop(0), *line_data]
         try: line_data = [
             *line_data,
             {arg.split()[0]: " ".join(arg.split()[1:]) for arg in line[1].split(",")}
         ]
         except IndexError: pass
 
-        for i in range(indent_level, len(active_batches)): active_batches.pop()
+        for i in range(indent_level, len(batches)): batches.pop()
 
-        if line_data[0][0] == "batch":
-            active_batches.append([line_data[0][1:], line_data[1]])
+        if line_data[0] == "batch":
+            batches.append([line_data[1], line_data[2]])
         else:
-            for batch in active_batches:
-                try: line_data = [*line_data[:-1], *batch[0], {**line_data[-1], **batch[1]}]
-                except TypeError: line_data = [*line_data, *batch[0], {**batch[1]}]
+            for batch in batches:
+                try: line_data = [line_data[0], [*batch[0], *line_data[1]], {**line_data[2], **batch[1]}]
+                except IndexError: line_data = [line_data[0], [*batch[0], *line_data[1]], {**batch[1]}]
             data.append(line_data)
 
     return(data)

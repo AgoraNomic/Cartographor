@@ -31,7 +31,12 @@
   		s = document.getElementById("stats");
   		s.innerHTML = "lat: " + y + "<br>long: " + x + "<br>";
   		for (var i = 0; i < stats.length; i++) {
-  			s.innerHTML += displayNames[i] + ": " + document.getElementById("r" + y + "c" + x).getAttribute(stats[i]) + "<br>";
+  			text = document.getElementById("r" + y + "c" + x).getAttribute(stats[i])
+			if (stats[i] == "link") {
+				s.innerHTML += displayNames[i] + ": <a href='https://" + text + "'>https://" + text + "</a><br>";
+			} else {
+	  			s.innerHTML += displayNames[i] + ": " + text + "<br>";
+	  		}
   		}
   	}
   </script>
