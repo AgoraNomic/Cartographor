@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<head>
+  <title>The Map of Arcadia - 2018-04-11</title>
+  <style>
+  	#map {
+  		border-collapse: collapse;
+  	}
+  	
+  	.cell {
+  		width: 20px;
+  		height: 20px;
+  	}
+  	
+  	.cell[type=a] {
+  		background-color: #999;
+  	}
+  	
+  	.cell[type=b] {
+  		background-color: #222;
+  	}
+  	
+  	.cell[type=w] {
+  		background-color: #eee;
+  	}
+  </style>
+  <script>
+  	var stats = ['owner', 'type', 'pres', 'fac', 'rank', 'date', 'by', 'link'];
+  	var displayNames = ['owner', 'type', 'preservation', 'facility', 'facility rank', 'latest modification', 'last change by', 'link to last change']
+  	
+  	function getStats(x, y) {
+  		s = document.getElementById("stats");
+  		s.innerHTML = "lat: " + y + "<br>long: " + x + "<br>";
+  		for (var i = 0; i < stats.length; i++) {
+  			text = document.getElementById("r" + y + "c" + x).getAttribute(stats[i])
+			if (stats[i] == "link") {
+				s.innerHTML += displayNames[i] + ": <a href='https://" + text + "'>https://" + text + "</a><br>";
+			} else {
+	  			s.innerHTML += displayNames[i] + ": " + text + "<br>";
+	  		}
+  		}
+  	}
+  </script>
+</head>
+<body>
+  <h1>The Map of Arcadia</h1>
+  <p>The Cartographor's Report. Up-to-date until 2018-04-11</p>
+  <table id='map' border='1'>
+    <tr class='row' id='r-6'>
+      <td class='cell' id='r-6c-6' onclick='getStats(-6, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c-5' onclick='getStats(-5, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c-4' onclick='getStats(-4, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c-3' onclick='getStats(-3, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c-2' onclick='getStats(-2, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c-1' onclick='getStats(-1, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c0' onclick='getStats(0, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c1' onclick='getStats(1, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c2' onclick='getStats(2, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c3' onclick='getStats(3, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c4' onclick='getStats(4, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c5' onclick='getStats(5, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-6c6' onclick='getStats(6, -6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r-5'>
+      <td class='cell' id='r-5c-6' onclick='getStats(-6, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c-5' onclick='getStats(-5, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c-4' onclick='getStats(-4, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c-3' onclick='getStats(-3, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c-2' onclick='getStats(-2, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c-1' onclick='getStats(-1, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c0' onclick='getStats(0, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c1' onclick='getStats(1, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c2' onclick='getStats(2, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c3' onclick='getStats(3, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c4' onclick='getStats(4, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c5' onclick='getStats(5, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-5c6' onclick='getStats(6, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r-4'>
+      <td class='cell' id='r-4c-6' onclick='getStats(-6, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c-5' onclick='getStats(-5, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c-4' onclick='getStats(-4, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c-3' onclick='getStats(-3, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c-2' onclick='getStats(-2, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c-1' onclick='getStats(-1, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c0' onclick='getStats(0, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c1' onclick='getStats(1, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c2' onclick='getStats(2, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c3' onclick='getStats(3, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c4' onclick='getStats(4, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c5' onclick='getStats(5, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-4c6' onclick='getStats(6, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r-3'>
+      <td class='cell' id='r-3c-6' onclick='getStats(-6, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c-5' onclick='getStats(-5, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c-4' onclick='getStats(-4, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c-3' onclick='getStats(-3, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c-2' onclick='getStats(-2, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c-1' onclick='getStats(-1, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c0' onclick='getStats(0, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c1' onclick='getStats(1, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c2' onclick='getStats(2, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c3' onclick='getStats(3, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c4' onclick='getStats(4, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c5' onclick='getStats(5, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-3c6' onclick='getStats(6, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r-2'>
+      <td class='cell' id='r-2c-6' onclick='getStats(-6, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c-5' onclick='getStats(-5, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c-4' onclick='getStats(-4, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c-3' onclick='getStats(-3, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c-2' onclick='getStats(-2, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c-1' onclick='getStats(-1, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c0' onclick='getStats(0, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c1' onclick='getStats(1, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c2' onclick='getStats(2, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c3' onclick='getStats(3, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c4' onclick='getStats(4, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c5' onclick='getStats(5, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-2c6' onclick='getStats(6, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r-1'>
+      <td class='cell' id='r-1c-6' onclick='getStats(-6, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c-5' onclick='getStats(-5, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c-4' onclick='getStats(-4, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c-3' onclick='getStats(-3, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c-2' onclick='getStats(-2, -1)' by='Agora' date='2018-04-09' link='31241' type='w' owner='Gaelan' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c-1' onclick='getStats(-1, -1)' pres='true' fac='mine' rank='1' by='Proposal 8014' date='2018-02-23' link='31241' type='w' owner='Agora'
+      ></td><td class='cell' id='r-1c0' onclick='getStats(0, -1)' by='Proposal 8014' date='2018-02-23' link='31241' type='w' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c1' onclick='getStats(1, -1)' pres='true' fac='orchard' rank='1' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora'
+      ></td><td class='cell' id='r-1c2' onclick='getStats(2, -1)' by='Agora' date='2018-04-09' link='31241' type='b' owner='Kenyon' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c3' onclick='getStats(3, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c4' onclick='getStats(4, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c5' onclick='getStats(5, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r-1c6' onclick='getStats(6, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r0'>
+      <td class='cell' id='r0c-6' onclick='getStats(-6, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c-5' onclick='getStats(-5, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c-4' onclick='getStats(-4, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c-3' onclick='getStats(-3, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c-2' onclick='getStats(-2, 0)' by='Agora' date='2018-04-09' link='31241' type='w' owner='Trigon' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r0c-1' onclick='getStats(-1, 0)' pres='true' by='Proposal 8014' date='2018-02-23' link='31241' type='w' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c0' onclick='getStats(0, 0)' pres='true' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c1' onclick='getStats(1, 0)' pres='true' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c2' onclick='getStats(2, 0)' by='Agora' date='2018-04-09' link='31241' type='b' owner='Corona' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r0c3' onclick='getStats(3, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c4' onclick='getStats(4, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c5' onclick='getStats(5, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r0c6' onclick='getStats(6, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r1'>
+      <td class='cell' id='r1c-6' onclick='getStats(-6, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c-5' onclick='getStats(-5, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c-4' onclick='getStats(-4, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c-3' onclick='getStats(-3, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c-2' onclick='getStats(-2, 1)' by='Agora' date='2018-04-09' link='31241' type='w' owner='Corona' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r1c-1' onclick='getStats(-1, 1)' pres='true' fac='farm' rank='1' by='Proposal 8014' date='2018-02-23' link='31241' type='w' owner='Agora'
+      ></td><td class='cell' id='r1c0' onclick='getStats(0, 1)' pres='true' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r1c1' onclick='getStats(1, 1)' pres='true' fac='mine' rank='1' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora'
+      ></td><td class='cell' id='r1c2' onclick='getStats(2, 1)' by='Proposal 8014' date='2018-02-23' link='31241' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r1c3' onclick='getStats(3, 1)' by='Trigon' type='w' owner='Agora' pres='false' fac='null' rank='0' date='2018-02-23' link='/'
+      ></td><td class='cell' id='r1c4' onclick='getStats(4, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c5' onclick='getStats(5, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r1c6' onclick='getStats(6, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r2'>
+      <td class='cell' id='r2c-6' onclick='getStats(-6, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c-5' onclick='getStats(-5, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c-4' onclick='getStats(-4, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c-3' onclick='getStats(-3, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c-2' onclick='getStats(-2, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c-1' onclick='getStats(-1, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c0' onclick='getStats(0, 2)' by='Trigon' type='b' owner='Agora' pres='false' fac='null' rank='0' date='2018-02-23' link='/'
+      ></td><td class='cell' id='r2c1' onclick='getStats(1, 2)' by='Trigon' type='w' owner='Agora' pres='false' fac='null' rank='0' date='2018-02-23' link='/'
+      ></td><td class='cell' id='r2c2' onclick='getStats(2, 2)' by='Trigon' type='b' owner='Agora' pres='false' fac='null' rank='0' date='2018-02-23' link='/'
+      ></td><td class='cell' id='r2c3' onclick='getStats(3, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c4' onclick='getStats(4, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c5' onclick='getStats(5, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r2c6' onclick='getStats(6, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r3'>
+      <td class='cell' id='r3c-6' onclick='getStats(-6, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c-5' onclick='getStats(-5, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c-4' onclick='getStats(-4, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c-3' onclick='getStats(-3, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c-2' onclick='getStats(-2, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c-1' onclick='getStats(-1, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c0' onclick='getStats(0, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c1' onclick='getStats(1, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c2' onclick='getStats(2, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c3' onclick='getStats(3, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c4' onclick='getStats(4, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c5' onclick='getStats(5, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r3c6' onclick='getStats(6, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r4'>
+      <td class='cell' id='r4c-6' onclick='getStats(-6, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c-5' onclick='getStats(-5, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c-4' onclick='getStats(-4, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c-3' onclick='getStats(-3, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c-2' onclick='getStats(-2, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c-1' onclick='getStats(-1, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c0' onclick='getStats(0, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c1' onclick='getStats(1, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c2' onclick='getStats(2, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c3' onclick='getStats(3, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c4' onclick='getStats(4, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c5' onclick='getStats(5, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r4c6' onclick='getStats(6, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r5'>
+      <td class='cell' id='r5c-6' onclick='getStats(-6, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c-5' onclick='getStats(-5, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c-4' onclick='getStats(-4, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c-3' onclick='getStats(-3, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c-2' onclick='getStats(-2, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c-1' onclick='getStats(-1, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c0' onclick='getStats(0, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c1' onclick='getStats(1, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c2' onclick='getStats(2, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c3' onclick='getStats(3, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c4' onclick='getStats(4, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c5' onclick='getStats(5, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r5c6' onclick='getStats(6, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+    <tr class='row' id='r6'>
+      <td class='cell' id='r6c-6' onclick='getStats(-6, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c-5' onclick='getStats(-5, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c-4' onclick='getStats(-4, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c-3' onclick='getStats(-3, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c-2' onclick='getStats(-2, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c-1' onclick='getStats(-1, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c0' onclick='getStats(0, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c1' onclick='getStats(1, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c2' onclick='getStats(2, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c3' onclick='getStats(3, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c4' onclick='getStats(4, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c5' onclick='getStats(5, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td><td class='cell' id='r6c6' onclick='getStats(6, 6)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='/'
+      ></td></tr>
+
+  </table>
+  <h2>Attributes (click a square)</h2>
+  <div id='stats'></div>
+  <h2>Player locations</h2>
+omd: (0, 0)<br>o: (0, 0)<br>Aris: (-1, -1)<br>DFF: (0, 0)<br>Quazie: (0, 0)<br>PSS: (0, 0)<br>Gaelan: (-1, -1)<br>G.: (0, 0)<br>Cuddlebeam: (-1, -1)<br>Trigon: (1, 2)<br>Telnaior: (0, 0)<br>Corona: (1, 1)<br>pokes: (0, 0)<br>Murphy: (0, 0)<br>VJ: (0, 0)<br>Kenyon: (-1, 1)<br>ATMunn: (-1, 1)<br>Ouri: (0, 0)<br>
+</body>

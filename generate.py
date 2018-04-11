@@ -16,8 +16,10 @@ changes = [i for i in fractal.load(get_contents("data/changes.fr")) if type(i) !
 table_html = "" # this contains html code that will be injected into the file
 table_data = [] # this will contain dictionaries that describe each square
 
-to_track = [] # this will store all the values we want to track, as set by the "track" command
-conditions = {}
+attrs = [] # this will store all the values we want to track, as set by the "track" command
+players = []
+
+alttype = "b"
 
 # these are the lowest possible latitude and longitude values.
 min_lat = 0
@@ -30,7 +32,7 @@ def create_initials(long_names):
     long_names = [str(i) for i in long_names]
     initials = {}
     for name in long_names:
-        name = sub(r"[\*\. ]", "", name)
+        name = sub(r"[*. ]", "", name)
     long_names.sort(key=len)
     for name in long_names:
         index = 0
@@ -54,12 +56,10 @@ for change in changes:
         args["name"] = pargs[0]
         try: args["display"]
         except KeyError: args["display"] = pargs[0]
-        to_track.append(args)
+        attrs.append(args)
     
     elif command == "untrack":
-        for index, attr in enumerate(to_track):
-            if attr["name"] == pargs[0]:
-                to_track.pop(index)
+        attrs = [i for i in attrs if i["name"] != pargs[0]]
         for row in table_data:
             for col in row:
                 try: col.pop(pargs[0])
@@ -68,6 +68,12 @@ for change in changes:
     elif command == "set":
         row = int(pargs[0])-min_lat
         col = int(pargs[1])-min_lon
+        try:
+            if args["type"] == "x":
+                args["type"] = alttype
+                if alttype == "b": alttype = "w"
+                else: alttype = "b"
+        except: pass
         for attr, value in args.items():
             table_data[row][col][attr] = value
         try:
@@ -97,10 +103,26 @@ for change in changes:
                 try: table_data[row][col]
                 except: table_data[row].append({})
 
+    elif command == "register":
+        args["name"] = pargs[0]
+        try: args["full"]
+        except KeyError: args["full"] = pargs[0]
+        try: args["location"]
+        except KeyError: args["location"] = "0 0"
+        players.append(args)
+
+    elif command == "deregister":
+        players = [i for i in players if i["name"] != pargs[0]]
+
+    elif command == "move":
+        for player in players:
+            if player["name"] == pargs[0]:
+                player["location"] = args["to"]
+
 # add values that are still default
 for row in table_data:
     for col in row:
-        for attr in to_track:
+        for attr in attrs:
             name = attr["name"]
             try: col[name]
             except KeyError: col[name] = attr["default"]
@@ -123,13 +145,23 @@ for row, i in enumerate(table_data):
         for attr, k in j.items():
             table_list[cell_list[row*(max_lon-min_lon+1)+col]] += " %s='%s'" % (attr, k)
 
+player_html = ""
+
+# generate player list
+for player in players:
+    player_lat, player_lon = player["location"].split()
+    player_html = "%s%s: (%s, %s)<br>" % (player_html, player["full"], player_lat, player_lon)
+
 # add the generated table html to the template
 table_html = "\n".join(table_list)
 html = html.replace("{{tabledata}}", table_html)
 
+# add the generated player list html
+html = html.replace("{{players}}", player_html)
+
 # add the values we're tracking to the template
-html = html.replace("{{attributes}}", str([j["name"] for i,j in enumerate(to_track)]))
-html = html.replace("{{dispnames}}", str([j["display"] for i,j in enumerate(to_track)]))
+html = html.replace("{{attributes}}", str([j["name"] for i,j in enumerate(attrs)]))
+html = html.replace("{{dispnames}}", str([j["display"] for i,j in enumerate(attrs)]))
 
 # add dates
 html = html.replace("{{date}}", date.isoformat())
