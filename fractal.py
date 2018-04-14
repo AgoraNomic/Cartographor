@@ -11,14 +11,21 @@ def load(str):
     for line in list:
         indent_level = line[0].count("\t") # necessary for batches.
         line_data = [] # holds json for individual lines.
-        try: line_data = [arg.split() for arg in line[0].split(",")] # split left side into arguments, then individual words.
+        
+        try: line_data = [" ".join(arg.split()) for arg in line[0].split(",")] # split left side into arguments, then individual words.
         except IndexError: pass
-        line_data = [line_data[0].pop(0), *line_data]
+
+        line_data = [
+            line_data[0].split(" ").pop(0),
+            [" ".join(line_data[0].split(" ")[1:]), *line_data[1:]]
+        ]
+        
         try: line_data = [
             *line_data,
             {arg.split()[0]: " ".join(arg.split()[1:]) for arg in line[1].split(",")}
         ]
-        except IndexError: pass
+        except IndexError:
+            line_data = [*line_data, {}]
 
         for i in range(indent_level, len(batches)): batches.pop()
 
