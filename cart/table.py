@@ -14,6 +14,12 @@ class Table:
     max_lat = 0
     max_lon = 0
 
+    # for converting between incices and latitudes
+    def to_row(self, lat): return lat - self.min_lat
+    def to_col(self, lon): return lon - self.min_lon
+    def to_lat(self, row): return row + self.min_lat
+    def to_lon(self, col): return col + self.min_lon
+
     # use this to track an attribute with the fractal "track" command
     def track(self, name, args):
         # set the display name to the name if no display name is specified
@@ -35,8 +41,8 @@ class Table:
     # use this to change the properties of a land unit
     def set(self, unit, args):
         # get the position for use in indices
-        row = int(unit[0])-self.min_lat
-        col = int(unit[1])-self.min_lon
+        row = self.to_row(int(unit[0]))
+        col = self.to_col(int(unit[1]))
         
         # handle alternating land types
         try:
@@ -112,3 +118,14 @@ class Table:
             elif command == "deregister": self.deregister(pargs[0])
             elif command == "move": self.move(pargs[0], args["to"])
             else: pass
+
+    def fill_cell(self, lat, lon):
+        cell = self.data[self.to_row(lat)][self.to_row(lon)]
+        for key, attr in self.attrs.items():
+            try: cell[key]
+            except KeyError: cell[key] = attr["default"]
+
+    def fill_table(self):
+        for i, row in enumerate(self.data):
+            for j, col in enumerate(row):
+                self.fill_cell(self.to_lat(i), self.to_lon(j))
