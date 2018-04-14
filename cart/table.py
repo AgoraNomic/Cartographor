@@ -35,8 +35,8 @@ class Table:
     # use this to change the properties of a land unit
     def set(self, unit, args):
         # get the position for use in indices
-        row = int(unit[0])-min_lat
-        col = int(unit[1])-min_lon
+        row = int(unit[0])-self.min_lat
+        col = int(unit[1])-self.min_lon
         
         # handle alternating land types
         try:
@@ -94,10 +94,10 @@ class Table:
         self.players[name] = args # add the object to the list of players
 
     def deregister(self, name):
-        players.pop(name)
+        self.players.pop(name)
 
     def move(self, name, to):
-        players[name]["location"] = to
+        self.players[name]["location"] = to
 
     def update(self, change_str):
         changes = fractal.load(change_str)
@@ -110,5 +110,5 @@ class Table:
             elif command == "resize": self.resize(args)
             elif command == "register": self.register(pargs[0], args)
             elif command == "deregister": self.deregister(pargs[0])
-            elif command == "move": self.move(pargs[0], pargs[1])
+            elif command == "move": self.move(pargs[0], args["to"])
             else: pass

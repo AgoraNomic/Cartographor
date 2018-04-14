@@ -96,4 +96,4 @@ batch: by Agora, date 2018-04-09
 	set  0 -2: owner Trigon
 	set  1 -2: owner Corona
 	set -1  2: owner Kenyon
-	set  0 +2: owner Corona
+	set  0  2: owner Corona
