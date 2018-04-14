@@ -1,4 +1,4 @@
-import fractal
+from cart import fractal
 
 class Table:
 
