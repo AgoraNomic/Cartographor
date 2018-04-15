@@ -1,16 +1,11 @@
 from datetime import datetime as dt
 from re import sub
-from cart import table
+from cart import prep
 
 date = dt.now().date() # get the date for the generated html file name
 
-# get all recorded changes
-changefile = ""
-with open("data/changes.fr") as f: changefile = f.read()
-
-t = table.Table()
-t.update(changefile)
-t.fill_table()
+# get the entire updated map
+t = prep.get_current_map()
 
 table_html = "" # this contains html code that will be injected into the file
 
