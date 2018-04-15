@@ -14,6 +14,10 @@ class Table:
     max_lat = 0
     max_lon = 0
 
+    # dimensions of the map
+    width = 0
+    height = 0
+
     # for converting between incices and latitudes
     def to_row(self, lat): return lat - self.min_lat
     def to_col(self, lon): return lon - self.min_lon
@@ -39,18 +43,18 @@ class Table:
                 except: pass
 
     # use this to change the properties of a land unit
-    def set(self, unit, args):
+    def set(self, lat, lon, args):
         # get the position for use in indices
-        row = self.to_row(int(unit[0]))
-        col = self.to_col(int(unit[1]))
+        row = self.to_row(int(lat))
+        col = self.to_col(int(lon))
         
         # handle alternating land types
         try:
             if args["type"] == "x":
-                args["type"] = alttype
-                if alttype == "b": alttype = "w"
-                else: alttype = "b"
-        except: pass
+                args["type"] = self.alttype
+                if self.alttype == "b": self.alttype = "w"
+                else: self.alttype = "b"
+        except KeyError: pass
 
         # set the attributes of the land unit specified by the unit variable
         for attr, value in args.items():
@@ -76,6 +80,9 @@ class Table:
         # convert the latitute and longitude into indices
         max_row = self.max_lat - self.min_lat + 1
         max_col = self.max_lon - self.min_lon + 1
+
+        self.width = max_col
+        self.height = max_row
 
         # create empty cells if they do not already exist
         # also trim excess cells
@@ -112,7 +119,7 @@ class Table:
 
             if command == "track": self.track(pargs[0], args)
             elif command == "untrack": self.untrack(pargs[0])
-            elif command == "set": self.set(pargs[0].split(), args)
+            elif command == "set": self.set(*pargs[0].split(), args)
             elif command == "resize": self.resize(args)
             elif command == "register": self.register(pargs[0], args)
             elif command == "deregister": self.deregister(pargs[0])
