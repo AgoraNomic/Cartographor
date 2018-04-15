@@ -1,5 +1,4 @@
 from datetime import datetime as dt
-from re import sub
 from cart import prep
 
 date = dt.now().date() # get the date for the generated html file name
