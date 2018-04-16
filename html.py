@@ -31,7 +31,7 @@ player_html = ""
 # generate player list
 for i, player in t.players.items():
     player_lat, player_lon = player["location"].split()
-    player_html = "<span style='color: %s'>%s%s: (%s, %s)</span><br>" % (player["color"], player_html, player["full"], player_lat, player_lon)
+    player_html = "%s<span style='color: %s'>%s: (%s, %s)</span><br>" % (player_html, player["color"], player["full"], player_lat, player_lon)
 
 # get the template file
 html = ""
