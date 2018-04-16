@@ -3,17 +3,17 @@ register o: date 2016-06-12
 register Aris: date 2016-09-13
 register DFF: date 2016-11-06
 register Quazie: date 2017-04-15
-register PSS: date 2017-04-16
+register PSS: date 2017-04-16, full Publius Scribonius Scholasticus
 register Gaelan: date 2017-05-15
 register G.: date 2017-06-29
-register Cuddlebeam: date 2017-08-25
+register Cuddlebeam: date 2017-08-25, full Cuddle Beam
 register Trigon: date 2017-09-24
 register Telnaior: date 2017-10-20
 register Corona: date 2017-11-17
 register pokes: date 2011-12-11
 register Murphy: date 2017-12-17
-register VJ Rada: date 2017-12-29
-batch: by Proposal 8014, date 2018-02-23, link 31241
+register VJ: date 2017-12-29, full VJ Rada
+batch: by Proposal 8014, date 2018-02-23, link business 31241
 	resize: min_lat -6, max_lat 6, min_lon -6, max_lon 6
 	track owner: default Agora
 	track type: default a
@@ -42,7 +42,7 @@ batch: by Proposal 8014, date 2018-02-23, link 31241
 		set  1  1: pres true, fac mine, rank 1
 		set  1  2 
 report 2018-02-24
-batch Cuddlebeam: date 2018-02-26, link 31408
+batch Cuddlebeam: date 2018-02-26, link business 31408
 	move: to  0  1
 	move: to -1  1
 	move: to  0  1
@@ -51,13 +51,13 @@ batch Cuddlebeam: date 2018-02-26, link 31408
 	move: to  1 -1
 	move: to  0 -1
 	move: to -1 -1
-batch Corona: date 2018-02-26, link 31409
+batch Corona: date 2018-02-26, link business 31409
 	move: to  0  1
 	move: to  1  1
 	move: to  0  1
 	move: to -1  1
 register Kenyon: date 2018-02-27
-batch Kenyon: date 2018-03-04, link 31459
+batch Kenyon: date 2018-03-04, link business 31459
 	move: to -1  0
 	move: to -1 -1
 	move: to  0 -1
@@ -68,32 +68,51 @@ batch Kenyon: date 2018-03-04, link 31459
 	move: to -1  1	
 report 2018-03-07
 register ATMunn: date 2018-03-11
-batch Aris: date 2018-03-11, link 31494
+batch Aris: date 2018-03-11, link business 31494
 	move: to -1  0
 	move: to -1 -1
-batch Corona: date 2018-03-12, link 31498
+batch Corona: date 2018-03-12, link business 31498
 	move: to  0  1
 	move: to  1  1
-batch Gaelan: date 2018-04-02, link 31564
+batch Gaelan: date 2018-04-02, link business 31564
 	move: to  0 -1
 	move: to -1 -1
 report 2018-04-02
-batch ATMunn: date 2018-04-03, link 31567
+batch ATMunn: date 2018-04-03, link business 31567
 	move: to -1  0
 	move: to -1  1
 register Ouri: date 2018-04-03
-batch: date 2018-04-07, link 31606
+batch: by Trigon, date 2018-04-07, link business 31606
     move Trigon: to 1 0
+    set 2 0: type x
 	move Trigon: to 1 1
+	set 2 1: type x
 	move Trigon: to 1 2
-	batch: by Trigon, type x
-		set 2 0
-		set 2 1
-		set 2 2
-		set 1 3
-batch: by Agora, date 2018-04-09
+	set 2 2: type x
+	set 1 3: type x
+batch: by Agora, date 2018-04-09, link official 08910
 	set -1 -2: owner Gaelan
 	set  0 -2: owner Trigon
 	set  1 -2: owner Corona
 	set -1  2: owner Kenyon
 	set  0  2: owner Corona
+report 2018-04-11
+batch: by Trigon, date 2018-04-11, link business 31643
+	batch Trigon
+		move: to  1  1
+		move: to  0  1
+		move: to  0  0
+		move: to  0 -1
+		move: to  0 -2
+	set 0 -2: fac farm, rank 1
+	set 0 -2: rank 2
+batch: date 2018-04-11, link business 31644
+	batch Quazie: by Quazie
+		move: to  0 -1
+		move: to -1 -1
+	batch Corona: by Corona
+		move: to  0 1
+		move: to -1 1
+batch ATMunn: date 2018-04-11, link business 31652
+	move: to -1  0
+	move: to -1 -1

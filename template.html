@@ -34,7 +34,9 @@
   		for (var i = 0; i < stats.length; i++) {
   			text = document.getElementById("r" + y + "c" + x).getAttribute(stats[i])
 			if (stats[i] == "link") {
-				s.innerHTML += displayNames[i] + ": <a href='https://" + text + "'>https://" + text + "</a><br>";
+			    var textList = text.split(" ")
+			    var fullLink = "https://mail-archive.com/agora-" + textList[0] + "@agoranomic.org/msg" + textList[1] + ".html"
+				s.innerHTML += displayNames[i] + ": <a href='" + fullLink + "'>https://" + fullLink + "</a><br>";
 			} else {
 	  			s.innerHTML += displayNames[i] + ": " + text + "<br>";
 	  		}

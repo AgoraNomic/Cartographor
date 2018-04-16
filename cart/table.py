@@ -1,4 +1,5 @@
 from cart import fractal
+from hashlib import sha1
 
 class Table:
 
@@ -103,6 +104,9 @@ class Table:
         # set location if specified
         try: args["location"]
         except KeyError: args["location"] = "0 0"
+
+        try: args["color"]
+        except KeyError: args["color"] = "#" + sha1(bytes(args["full"], "utf-8")).hexdigest()[0:6]
 
         self.players[name] = args # add the object to the list of players
 
