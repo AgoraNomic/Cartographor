@@ -5,8 +5,9 @@ register DFF: date 2016-11-06
 register Quazie: date 2017-04-15
 register PSS: date 2017-04-16, full Publius Scribonius Scholasticus
 register Gaelan: date 2017-05-15
-register G.: date 2017-06-29
+register nichdel: date 2017-06-29
 register Cuddlebeam: date 2017-08-25, full Cuddle Beam
+register G.: date 2017-08-25
 register Trigon: date 2017-09-24
 register Telnaior: date 2017-10-20
 register Corona: date 2017-11-17
