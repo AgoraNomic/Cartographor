@@ -51,5 +51,5 @@ html = html.replace("{{dispnames}}", str([j["display"] for i,j in t.attrs.items(
 # add dates
 html = html.replace("{{date}}", date.isoformat())
 
-with open("maps/map-%s.html" % (date.isoformat()), "w") as f:
+with open("int/%s.html" % (date.isoformat()), "w") as f:
     f.write(html)

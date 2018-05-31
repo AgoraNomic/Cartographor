@@ -183,6 +183,7 @@ batch: by G., date 2018-05-04, link business 31842
 batch: by o, date 2018-05-04, link business 31846
 	set 6 1: type b
 	move o: to 6 1
+report 2018-05-04
 batch: by o, date 2018-05-09, link business 31877
 	set 6 2: type b
 	move o: to 6 2
@@ -195,3 +196,4 @@ batch: by Agora, date 2018-05-12, link official 08866
 	set 2 -2: owner Corona
 	set 1 -3: owner Quazie
 	set 4  0: owner Trigon
+report 2018-05-31

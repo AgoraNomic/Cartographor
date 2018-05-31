@@ -1,0 +1,120 @@
+========================================================================
+THE MAP OF ARCADIA
+
+Published: May 31, 2018
+Previous Report: May 4, 2018
+
+View an interactive version of this report here:
+https://agoranomic.org/Cartographor/maps/map-2018-05-31.html
+
+
+
+MAPS
+========================================================================
+
+       LONGITUDE               LONGITUDE               LONGITUDE      
+                                                                        
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +       
+  -                 -     -                 -     -                 -
+  6  .............  6     6  .............  6     6  .............  6
+  5  .............  5     5  .............  5     5  .............  5
+  4  .............  4     4  .............  4     4  .............  4
+  3  .............  3  L  3  .............  3  L  3  .............  3
+  2  .............  2  A  2  .............  2  A  2  .............  2
+  1  ....wwwbb....  1  T  1  ....a###K....  1  T  1  ....:1:2:....  1
+  0  ....wwgbb....  0  I  0  ....T###C....  0  I  0  ....::::5....  0
+  1  ...wwwbbbw...  1  T  1  ...QC###AM...  1  T  1  ...:73:4:8...  1
+  2  ....wbbbb....  2  U  2  ....CoGC:....  2  U  2  ....::96:....  2
+  3  .....bb......  3  D  3  .....:G......  3  D  3  .....::......  3
+  4  ......b......  4  E  4  ......T......  4  E  4  ......:......  4
+  5  ......b......  5     5  ......:......  5     5  ......:......  5
+  6  ......bbbbb..  6     6  ......:::::..  6     6  ......:::::..  6
+  +                 +     +                 +     +                 +
+   - 6543210123456 +       - 6543210123456 +        - 6543210123456 +      
+                                                                        
+      LAND  TYPE               OWNERSHIP               FACILITIES     
+   -----------------       -----------------        -----------------      
+   aether        (.)       Agora                    Aether        (.) 
+   white         (w)         Aether      (.)        Non-Aether    (:) 
+   black         (b)         Non-Aether  (:)         
+   gray          (g)         Preserved   (#)        See next section
+                           Gaelan        (a)        for key 
+                           Kenyon        (K)            
+                           Trigon        (T)                                              
+                           Corona        (C)         
+                           Aris          (A)         
+                           ATMunn        (M)         
+                           G.            (G)
+			   o             (o)
+
+
+
+FACILITIES
+========================================================================
+
+ID   Land Unit   Description
+---------------------------------------------------------
+1    (-1, -1)    Preserved Rank 1 Mine, owned by Agora
+2    (-1, +1)    Preserved Rank 1 Orchard, owned by Agora
+3    (+1, -1)    Preserved Rank 1 Farm, owned by Agora
+4    (+1, +1)    Preserved Rank 1 Mine, owned by Agora
+5    ( 0, +2)    Rank 2 Mine, owned by Corona
+6    (+2, +1)    Rank 2 Orchard, owned by Corona
+7    (+1, -2)    Rank 2 Refinery, owned by Corona
+8    (+1, +3)    Rank 1 Farm, owned by ATMunn
+9    (+2,  0)    Rank 2 Mine, owned by G.
+
+
+
+LOCATIONS OF ENTITIES
+========================================================================
+
+Entity        Last report   This Report
+----------------------------------------
+omd           ( 0,  0)      ( 0,  0)
+o             (+6, +1)      (+6, +3)
+Aris          (-1, -1)      (-1, -1)
+DFF[1]        ( 0,  0)      ( 0,  0)
+Quazie        (+1, -2)      (-1, -1)
+P.S.S.[2]     ( 0,  0)      ( 0,  0)
+Gaelan        (-1, -1)      (-1, -1)
+G.            ( 0,  0)      (+3,  0)
+Cuddle Beam   (-1, -1)      (-1, -1)
+Trigon        (+1, +1)      (+1, +1)
+Telnaior      ( 0,  0)      ( 0,  0)
+Corona        ( 0, +2)      ( 0, +2)
+pokes         ( 0,  0)      ( 0,  0)
+Murphy        ( 0,  0)      ( 0,  0)
+VJ Rada       ( 0,  0)      ( 0,  0)
+Kenyon        (-1, +1)      (-1, +1)
+ATMunn        (-1, +3)      (+1, +3)
+Ouri          ( 0,  0)      ( 0,  0)
+
+Q*Bert        N/A           ( 0,  0)
+
+[1]: In Full, 天火狐
+[2]: In Full, Publius Scribonius Scholasticus
+
+
+
+ALTERNATING LAND TYPE
+========================================================================
+
+The alternating land type has been switched 6 times.
+The current value is Black.
+
+
+
+CHANGES IN LAND TYPE AND OWNERSHIP
+========================================================================
+
+Date         Unit       By      Change   From     To
+--------------------------------------------------------
+2018-05-09   (+6, +2)   o       type     aether   black
+2018-05-09   (+6, +3)   o       type     aether   black
+2018-05-09   (+6, +4)   o       type     aether   black
+2018-05-12   (+3,  0)   Agora   owner    Agora    G.   
+2018-05-12   (+2, -1)   Agora   owner    Agora    o    
+2018-05-12   (+2, -2)   Agora   owner    Agora    Corona
+2018-05-12   (+1, -3)   Agora   owner    Agora    Quazie
+2018-05-12   (+4,  0)   Agora   owner    Agora    Trigon
