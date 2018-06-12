@@ -1,0 +1,156 @@
+========================================================================
+THE MAP OF ARCADIA
+
+Previous:   Jun 1, 2018
+Revision 0: Jun 11, 2018
+
+View an interactive version of this report here:
+https://agoranomic.org/Cartographor/int/2018-06-11.html
+
+
+
+MAPS
+========================================================================
+
+       LONGITUDE               LONGITUDE               LONGITUDE      
+                                                                        
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +       
+  -                 -     -                 -     -                 -
+  6  wwwwwwwbbbbbb  6     6  :::::::::::::  6     6  :::::::::::::  6
+  5  w.....w.....b  5     5  :.....:.....:  5     5  :.....:.....:  5
+  4  w.....w.....b  4     4  :.....:.....:  4     4  :.....:.....:  4
+  3  w.....w.....b  3  L  3  :.....:.....:  3  L  3  :.....:.....:  3
+  2  w.....w.....b  2  A  2  :.....:.....:  2  A  2  :.....:.....:  2
+  1  w...wwwbb...b  1  T  1  :...a###K...:  1  T  1  :...:1:2:...:  1
+  0  w...wwgbb...b  0  I  0  :...T###C...:  0  I  0  :...::::6...:  0
+  1  w..wwwbbbw..b  1  T  1  :..QC###AM..:  1  T  1  :..::3:4:5..:  1
+  2  w...wbbbb...b  2  U  2  :...CoGCC...:  2  U  2  :...:::87...:  2
+  3  w...bbbb....b  3  D  3  :...:GG:....:  3  D  3  :...::::....:  3
+  4  w....bb.....b  4  E  4  :....:T.....:  4  E  4  :....::.....:  4
+  5  w.....b.....b  5     5  :.....:.....:  5     5  :.....:.....:  5
+  6  wwwwwwbbbbbbb  6     6  :::::::::::::  6     6  :::::::::::::  6
+  +                 +     +                 +     +                 +
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +      
+                                                                        
+      LAND  TYPE               OWNERSHIP               FACILITIES     
+   -----------------       -----------------        -----------------      
+   aether        (.)       Agora                    Aether        (.) 
+   white         (w)         Aether      (.)        Non-Aether    (:) 
+   black         (b)         Non-Aether  (:)         
+   gray          (g)         Preserved   (#)        See next section
+                           Gaelan        (a)        for key 
+                           Kenyon        (K)            
+                           Trigon        (T)                                              
+                           Corona        (C)         
+                           Aris          (A)         
+                           ATMunn        (M)         
+                           G.            (G)
+                           o             (o)
+
+
+
+FACILITIES
+========================================================================
+
+ID   Land Unit   Description
+---------------------------------------------------------
+1    (-1, -1)    Preserved Rank 1 Mine
+2    (-1, +1)    Preserved Rank 1 Orchard
+3    (+1, -1)    Preserved Rank 1 Farm
+4    (+1, +1)    Preserved Rank 1 Mine
+5    (+1, +3)    Rank 1 Farm, owned by ATMunn
+6    ( 0, +2)    Rank 2 Refinery, owned by Corona
+7    (+2, +2)    Rank 2 Mine, owned by Corona
+8    (+2, +1),   Rank 2 Orchard, owned by Corona
+
+
+
+LOCATIONS OF ENTITIES
+========================================================================
+
+Entity        Last report   This Report
+----------------------------------------
+omd           ( 0,  0)      ( 0,  0)
+o             (+4, +6)      (-6, +2)
+Aris          (-1, -1)      (-1, -1)
+DFF[1]        ( 0,  0)      ( 0,  0)
+Quazie        (-1, -2)      (+1, -1)
+P.S.S.[2]     ( 0,  0)      ( 0,  0)
+Gaelan        (-1, -1)      (-1, -1)
+G.            (+3, -1)      (+3, -1)
+Cuddle Beam   (-1, -1)      (-1, -1)
+Trigon        (+1, +1)      (+1, +1)
+Telnaior      ( 0,  0)      (+6, -1)
+Corona        ( 0, +2)      (+2, -1)
+pokes         ( 0,  0)      ( 0,  0)
+Murphy        ( 0,  0)      ( 0,  0)
+VJ Rada       ( 0,  0)      ( 0,  0)
+Kenyon        (-1, +1)      (-1, +1)
+ATMunn        (-1, +3)      (+1, +3)
+Ouri          ( 0,  0)      ( 0,  0)
+twg           ( 0,  0)      ( 0,  0)
+
+Q*Bert        ( 0,  0)      (+2, -1)
+
+[1]: In Full, 天火狐
+[2]: In Full, Publius Scribonius Scholasticus
+
+
+
+ALTERNATING LAND TYPE
+========================================================================
+
+The alternating land type has been switched 6 times.
+The current value is Black.
+
+
+
+CHANGES IN LAND TYPE AND OWNERSHIP
+========================================================================
+
+Date         Unit       By         Change   From     To
+-----------------------------------------------------------
+2018-06-10   (-2,  0)   Telnaior   type     aether   white
+2018-06-10   (-3,  0)   Telnaior   type     aether   white
+2018-06-10   (-4,  0)   Telnaior   type     aether   white
+2018-06-10   (-5,  0)   Telnaior   type     aether   white
+2018-06-10   (-6,  0)   Telnaior   type     aether   white
+2018-06-10   (+3, +6)   o          type     aether   black
+2018-06-10   (+2, +6)   o          type     aether   black
+2018-06-10   (+1, +6)   o          type     aether   black
+2018-06-10   (+0, +6)   o          type     aether   black
+2018-06-10   (-1, +6)   o          type     aether   black
+2018-06-10   (-2, +6)   o          type     aether   black
+2018-06-10   (-3, +6)   o          type     aether   black
+2018-06-10   (-4, +6)   o          type     aether   black
+2018-06-10   (-5, +6)   o          type     aether   black
+2018-06-10   (-6, +6)   o          type     aether   black
+2018-06-10   (-6, +5)   o          type     aether   black
+2018-06-10   (-6, +4)   o          type     aether   black
+2018-06-10   (-6, +3)   o          type     aether   black
+2018-06-10   (-6, +2)   o          type     aether   black
+2018-06-10   (-6, +1)   o          type     aether   black
+2018-06-10   (-6, -1)   Telnaior   type     aether   white
+2018-06-10   (-6, -2)   Telnaior   type     aether   white
+2018-06-10   (-6, -3)   Telnaior   type     aether   white
+2018-06-10   (-6, -4)   Telnaior   type     aether   white
+2018-06-10   (-6, -5)   Telnaior   type     aether   white
+2018-06-10   (-6, -6)   Telnaior   type     aether   white
+2018-06-10   (-5, -6)   Telnaior   type     aether   white
+2018-06-10   (-4, -6)   Telnaior   type     aether   white
+2018-06-10   (-3, -6)   Telnaior   type     aether   white
+2018-06-10   (-2, -6)   Telnaior   type     aether   white
+2018-06-10   (-1, -6)   Telnaior   type     aether   white
+2018-06-10   ( 0, -6)   Telnaior   type     aether   white
+2018-06-10   (+1, -6)   Telnaior   type     aether   white
+2018-06-10   (+2, -6)   Telnaior   type     aether   white
+2018-06-10   (+3, -6)   Telnaior   type     aether   white
+2018-06-10   (+4, -6)   Telnaior   type     aether   white
+2018-06-10   (+5, -6)   Telnaior   type     aether   white
+2018-06-10   (+6, -6)   Telnaior   type     aether   white
+2018-06-10   (+6, -5)   Telnaior   type     aether   white
+2018-06-10   (+6, -4)   Telnaior   type     aether   white
+2018-06-10   (+6, -3)   Telnaior   type     aether   white
+2018-06-10   (+6, -2)   Telnaior   type     aether   white
+2018-06-10   (+6, -1)   Telnaior   type     aether   white
+2018-06-11   (+3, -1)   Agora	   owner    Agora    G.

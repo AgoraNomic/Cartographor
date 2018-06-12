@@ -84,8 +84,8 @@ batch ATMunn: date 2018-04-03, link business 31567
 	move: to -1  1
 register Ouri: date 2018-04-03
 batch: by Trigon, date 2018-04-07, link business 31606
-    move Trigon: to 1 0
-    set 2 0: type x
+	move Trigon: to 1 0
+	set 2 0: type x
 	move Trigon: to 1 1
 	set 2 1: type x
 	move Trigon: to 1 2
@@ -116,11 +116,13 @@ batch: date 2018-04-11, link business 31644
 batch ATMunn: by ATMunn, date 2018-04-11, link business 31652
 	move: to -1  0
 	move: to -1 -1
+report 2018-04-16
 batch: by Agora, date 2018-04-17
 	set 1 2: owner Aris
 	set 1 3: owner ATMunn
 	set 2 0: owner G.
 	set 2 1: owner Corona
+report 2018-04-24
 batch: date 2018-04-25, link business 31765
 	batch: by Corona
 		move Corona: to 0 1
@@ -184,6 +186,7 @@ batch: by o, date 2018-05-04, link business 31846
 	set 6 1: type b
 	move o: to 6 1
 report 2018-05-04
+register Q*Bert: date 2018-06-01
 batch: by o, date 2018-05-09, link business 31877
 	set 6 2: type b
 	move o: to 6 2
@@ -196,4 +199,86 @@ batch: by Agora, date 2018-05-12, link official 08866
 	set 2 -2: owner Corona
 	set 1 -3: owner Quazie
 	set 4  0: owner Trigon
+register twg: date 2018-05-24
 report 2018-05-31
+batch: fac null, by Agora, date 2018-06-01, link official 08888
+	set 0  2
+	set 2  1
+	set 1 -2
+	set 2  3
+	set 2  0
+batch: by o, date 2018-06-01, link business 31934
+	move o: to 6 4
+	set 6 5: type b
+	move o: to 6 5
+	set 6 6: type b
+	move o: to 6 6
+	set 5 6: type b
+	move o: to 5 6
+	set 4 6: type b
+	move o: to 4 6
+	set 3 6: type b
+batch: by G., date 2018-06-01, link business 31940
+	set 3  1: type b
+	move G.: to 3 -1
+	set 3 -2: type b
+	set 4 -1: type b
+batch: by Telnaior, date 2018-06-01, link business 31946
+	move Telnaior: to -6 0
+	batch: type w
+		set -2 0
+		set -3 0
+		set -4 0
+		set -5 0
+		set -6 0
+move Quazie: to 1 -1, by Quazie, date 2018-06-10, link business 31969
+batch: by Corona, date 2018-06-10, link business 31970
+	set 0 2: fac ref, rank 2
+	set 2 2: fac mine, rank 2
+	set 2 1: fac orchard, rank 2
+	move Corona: to 2 1
+batch: by o, date 2018-06-10, link business 31974
+	move o: to -6 2
+	batch: type b
+		set  3  6
+		set  2  6
+		set  1  6
+		set  0  6
+		set -1  6
+		set -2  6
+		set -3  6
+		set -4  6
+		set -5  6
+		set -6  6
+		set -6  5
+		set -6  4
+		set -6  3
+		set -6  2
+		set -6  1
+batch: by Telnaior, date 2018-06-10, link business 31978
+	move Telnaior: to 6 -1
+	batch: type w
+		set -6 -1
+		set -6 -2
+		set -6 -3
+		set -6 -4
+		set -6 -5
+		set -6 -6
+		set -5 -6
+		set -4 -6
+		set -3 -6
+		set -2 -6
+		set -1 -6
+		set  0 -6
+		set  1 -6
+		set  2 -6
+		set  3 -6
+		set  4 -6
+		set  5 -6
+		set  6 -6
+		set  6 -5
+		set  6 -4
+		set  6 -3
+		set  6 -2
+		set  6 -1
+set 3 -1: owner G., by Agora, date 2018-06-11, link business 08907

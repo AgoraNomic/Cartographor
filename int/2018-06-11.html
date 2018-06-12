@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head>
+  <title>The Map of Arcadia - 2018-06-11</title>
+  <style>
+  	#map {
+  		border-collapse: collapse;
+  	}
+  	
+  	.cell {
+  		width: 20px;
+  		height: 20px;
+  		border-color: darkgray;
+  	}
+  	
+  	.cell[type=a] {
+  		background-color: lightgray;
+  	}
+  	
+  	.cell[type=b] {
+  		background-color: black;
+  	}
+  	
+  	.cell[type=w] {
+  		background-color: white;
+  	}
+
+  	.cell[type=g] {
+  		background-color: gray;
+  	}
+  </style>
+  <script>
+  	var stats = ['owner', 'type', 'pres', 'fac', 'rank', 'date', 'by', 'link'];
+  	var displayNames = ['owner', 'type', 'preservation', 'facility', 'facility rank', 'latest modification', 'last change by', 'link to last change']
+  	
+  	function getStats(x, y) {
+  		s = document.getElementById("stats");
+  		s.innerHTML = "lat: " + y + "<br>long: " + x + "<br>";
+  		for (var i = 0; i < stats.length; i++) {
+  			text = document.getElementById("r" + y + "c" + x).getAttribute(stats[i])
+			if (stats[i] == "link") {
+			    var textList = text.split(" ")
+			    var fullLink = "https://mail-archive.com/agora-" + textList[0] + "@agoranomic.org/msg" + textList[1] + ".html"
+				s.innerHTML += displayNames[i] + ": <a href='" + fullLink + "'>https://" + fullLink + "</a><br>";
+			} else {
+	  			s.innerHTML += displayNames[i] + ": " + text + "<br>";
+	  		}
+  		}
+  	}
+  </script>
+</head>
+<body>
+  <h1>The Map of Arcadia</h1>
+  <p>The Cartographor's Report. Up-to-date until 2018-06-11</p>
+  <table id='map' border='1'>
+    <tr class='row' id='r-6'>
+      <td class='cell' id='r-6c-6' onclick='getStats(-6, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c-5' onclick='getStats(-5, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c-4' onclick='getStats(-4, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c-3' onclick='getStats(-3, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c-2' onclick='getStats(-2, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c-1' onclick='getStats(-1, -6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c0' onclick='getStats(0, -6)' type='w' by='Telnaior' date='2018-06-01' link='business 31946' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c1' onclick='getStats(1, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c2' onclick='getStats(2, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c3' onclick='getStats(3, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c4' onclick='getStats(4, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c5' onclick='getStats(5, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-6c6' onclick='getStats(6, -6)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r-5'>
+      <td class='cell' id='r-5c-6' onclick='getStats(-6, -5)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-5c-5' onclick='getStats(-5, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c-4' onclick='getStats(-4, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c-3' onclick='getStats(-3, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c-2' onclick='getStats(-2, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c-1' onclick='getStats(-1, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c0' onclick='getStats(0, -5)' type='w' by='Telnaior' date='2018-06-01' link='business 31946' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-5c1' onclick='getStats(1, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c2' onclick='getStats(2, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c3' onclick='getStats(3, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c4' onclick='getStats(4, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c5' onclick='getStats(5, -5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-5c6' onclick='getStats(6, -5)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r-4'>
+      <td class='cell' id='r-4c-6' onclick='getStats(-6, -4)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-4c-5' onclick='getStats(-5, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c-4' onclick='getStats(-4, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c-3' onclick='getStats(-3, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c-2' onclick='getStats(-2, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c-1' onclick='getStats(-1, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c0' onclick='getStats(0, -4)' type='w' by='Telnaior' date='2018-06-01' link='business 31946' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-4c1' onclick='getStats(1, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c2' onclick='getStats(2, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c3' onclick='getStats(3, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c4' onclick='getStats(4, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c5' onclick='getStats(5, -4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-4c6' onclick='getStats(6, -4)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r-3'>
+      <td class='cell' id='r-3c-6' onclick='getStats(-6, -3)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-3c-5' onclick='getStats(-5, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c-4' onclick='getStats(-4, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c-3' onclick='getStats(-3, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c-2' onclick='getStats(-2, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c-1' onclick='getStats(-1, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c0' onclick='getStats(0, -3)' type='w' by='Telnaior' date='2018-06-01' link='business 31946' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-3c1' onclick='getStats(1, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c2' onclick='getStats(2, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c3' onclick='getStats(3, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c4' onclick='getStats(4, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c5' onclick='getStats(5, -3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-3c6' onclick='getStats(6, -3)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r-2'>
+      <td class='cell' id='r-2c-6' onclick='getStats(-6, -2)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-2c-5' onclick='getStats(-5, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c-4' onclick='getStats(-4, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c-3' onclick='getStats(-3, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c-2' onclick='getStats(-2, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c-1' onclick='getStats(-1, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c0' onclick='getStats(0, -2)' type='w' by='Telnaior' date='2018-06-01' link='business 31946' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-2c1' onclick='getStats(1, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c2' onclick='getStats(2, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c3' onclick='getStats(3, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c4' onclick='getStats(4, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c5' onclick='getStats(5, -2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-2c6' onclick='getStats(6, -2)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r-1'>
+      <td class='cell' id='r-1c-6' onclick='getStats(-6, -1)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c-5' onclick='getStats(-5, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c-4' onclick='getStats(-4, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c-3' onclick='getStats(-3, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c-2' onclick='getStats(-2, -1)' type='w' by='Agora' date='2018-04-09' link='official 08810' owner='Gaelan' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c-1' onclick='getStats(-1, -1)' type='w' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' fac='mine' rank='1' owner='Agora'
+      ></td><td class='cell' id='r-1c0' onclick='getStats(0, -1)' type='w' by='Proposal 8014' date='2018-02-23' link='business 31241' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c1' onclick='getStats(1, -1)' type='b' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' fac='orchard' rank='1' owner='Agora'
+      ></td><td class='cell' id='r-1c2' onclick='getStats(2, -1)' type='b' by='Agora' date='2018-04-09' link='official 08810' owner='Kenyon' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r-1c3' onclick='getStats(3, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c4' onclick='getStats(4, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c5' onclick='getStats(5, -1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r-1c6' onclick='getStats(6, -1)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r0'>
+      <td class='cell' id='r0c-6' onclick='getStats(-6, 0)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r0c-5' onclick='getStats(-5, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c-4' onclick='getStats(-4, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c-3' onclick='getStats(-3, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c-2' onclick='getStats(-2, 0)' type='w' by='Agora' date='2018-05-01' link='business 31643' owner='Trigon' fac='null' rank='0' pres='false'
+      ></td><td class='cell' id='r0c-1' onclick='getStats(-1, 0)' type='w' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c0' onclick='getStats(0, 0)' type='g' by='Proposal 8033' date='2018-04-27' link='business 31588' pres='true' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c1' onclick='getStats(1, 0)' type='b' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r0c2' onclick='getStats(2, 0)' type='b' by='Corona' date='2018-06-10' link='business 31970' owner='Corona' fac='ref' rank='2' pres='false'
+      ></td><td class='cell' id='r0c3' onclick='getStats(3, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c4' onclick='getStats(4, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c5' onclick='getStats(5, 0)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r0c6' onclick='getStats(6, 0)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r1'>
+      <td class='cell' id='r1c-6' onclick='getStats(-6, 1)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r1c-5' onclick='getStats(-5, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r1c-4' onclick='getStats(-4, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r1c-3' onclick='getStats(-3, 1)' by='Agora' date='2018-05-12' link='official 08866' type='w' owner='Quazie' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r1c-2' onclick='getStats(-2, 1)' type='w' by='Agora' date='2018-06-01' link='official 08888' owner='Corona' fac='null' rank='2' pres='false'
+      ></td><td class='cell' id='r1c-1' onclick='getStats(-1, 1)' type='w' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' fac='farm' rank='1' owner='Agora'
+      ></td><td class='cell' id='r1c0' onclick='getStats(0, 1)' type='b' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' owner='Agora' fac='null' rank='0'
+      ></td><td class='cell' id='r1c1' onclick='getStats(1, 1)' type='b' by='Proposal 8014' date='2018-02-23' link='business 31241' pres='true' fac='mine' rank='1' owner='Agora'
+      ></td><td class='cell' id='r1c2' onclick='getStats(2, 1)' type='b' by='Agora' date='2018-04-17' link='business 31241' owner='Aris' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r1c3' onclick='getStats(3, 1)' by='ATMunn' date='2018-05-04' link='business 31833' type='w' owner='ATMunn' fac='farm' rank='1' pres='false'
+      ></td><td class='cell' id='r1c4' onclick='getStats(4, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r1c5' onclick='getStats(5, 1)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r1c6' onclick='getStats(6, 1)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r2'>
+      <td class='cell' id='r2c-6' onclick='getStats(-6, 2)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r2c-5' onclick='getStats(-5, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r2c-4' onclick='getStats(-4, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r2c-3' onclick='getStats(-3, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r2c-2' onclick='getStats(-2, 2)' by='Agora' date='2018-05-12' link='official 08866' type='w' owner='Corona' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r2c-1' onclick='getStats(-1, 2)' by='Agora' date='2018-05-12' link='official 08866' type='b' owner='o' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r2c0' onclick='getStats(0, 2)' by='Agora' date='2018-06-01' link='official 08888' type='b' owner='G.' fac='null' rank='2' pres='false'
+      ></td><td class='cell' id='r2c1' onclick='getStats(1, 2)' by='Corona' date='2018-06-10' link='business 31970' type='b' owner='Corona' fac='orchard' rank='2' pres='false'
+      ></td><td class='cell' id='r2c2' onclick='getStats(2, 2)' by='Corona' date='2018-06-10' link='business 31970' type='b' fac='mine' rank='2' owner='Agora' pres='false'
+      ></td><td class='cell' id='r2c3' onclick='getStats(3, 2)' fac='null' by='Agora' date='2018-06-01' link='official 08888' owner='Agora' type='a' pres='false' rank='0'
+      ></td><td class='cell' id='r2c4' onclick='getStats(4, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r2c5' onclick='getStats(5, 2)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r2c6' onclick='getStats(6, 2)' type='b' by='o' date='2018-06-10' link='business 31974' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r3'>
+      <td class='cell' id='r3c-6' onclick='getStats(-6, 3)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r3c-5' onclick='getStats(-5, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c-4' onclick='getStats(-4, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c-3' onclick='getStats(-3, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c-2' onclick='getStats(-2, 3)' by='G.' date='2018-06-01' link='business 31940' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r3c-1' onclick='getStats(-1, 3)' by='Agora' date='2018-06-11' link='business 08907' type='b' owner='G.' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r3c0' onclick='getStats(0, 3)' by='Agora' date='2018-05-12' link='official 08866' type='b' owner='G.' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r3c1' onclick='getStats(1, 3)' by='G.' date='2018-06-01' link='business 31940' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r3c2' onclick='getStats(2, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c3' onclick='getStats(3, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c4' onclick='getStats(4, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c5' onclick='getStats(5, 3)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r3c6' onclick='getStats(6, 3)' by='o' date='2018-06-10' link='business 31974' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r4'>
+      <td class='cell' id='r4c-6' onclick='getStats(-6, 4)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r4c-5' onclick='getStats(-5, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c-4' onclick='getStats(-4, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c-3' onclick='getStats(-3, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c-2' onclick='getStats(-2, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c-1' onclick='getStats(-1, 4)' by='G.' date='2018-06-01' link='business 31940' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r4c0' onclick='getStats(0, 4)' by='Agora' date='2018-05-12' link='official 08866' type='b' owner='Trigon' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r4c1' onclick='getStats(1, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c2' onclick='getStats(2, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c3' onclick='getStats(3, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c4' onclick='getStats(4, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c5' onclick='getStats(5, 4)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r4c6' onclick='getStats(6, 4)' by='o' date='2018-06-01' link='business 31934' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r5'>
+      <td class='cell' id='r5c-6' onclick='getStats(-6, 5)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r5c-5' onclick='getStats(-5, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c-4' onclick='getStats(-4, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c-3' onclick='getStats(-3, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c-2' onclick='getStats(-2, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c-1' onclick='getStats(-1, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c0' onclick='getStats(0, 5)' by='o' date='2018-05-04' link='business 31840' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r5c1' onclick='getStats(1, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c2' onclick='getStats(2, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c3' onclick='getStats(3, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c4' onclick='getStats(4, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c5' onclick='getStats(5, 5)' owner='Agora' type='a' pres='false' fac='null' rank='0' date='2018-02-23' by='Agora' link='business 31241'
+      ></td><td class='cell' id='r5c6' onclick='getStats(6, 5)' by='o' date='2018-06-01' link='business 31934' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+    <tr class='row' id='r6'>
+      <td class='cell' id='r6c-6' onclick='getStats(-6, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c-5' onclick='getStats(-5, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c-4' onclick='getStats(-4, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c-3' onclick='getStats(-3, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c-2' onclick='getStats(-2, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c-1' onclick='getStats(-1, 6)' type='w' by='Telnaior' date='2018-06-10' link='business 31978' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c0' onclick='getStats(0, 6)' by='o' date='2018-05-04' link='business 31840' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c1' onclick='getStats(1, 6)' by='o' date='2018-05-04' link='business 31846' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c2' onclick='getStats(2, 6)' by='o' date='2018-05-09' link='business 31877' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c3' onclick='getStats(3, 6)' by='o' date='2018-05-09' link='business 31877' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c4' onclick='getStats(4, 6)' by='o' date='2018-05-09' link='business 31877' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c5' onclick='getStats(5, 6)' by='o' date='2018-06-01' link='business 31934' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td><td class='cell' id='r6c6' onclick='getStats(6, 6)' by='o' date='2018-06-01' link='business 31934' type='b' owner='Agora' pres='false' fac='null' rank='0'
+      ></td></tr>
+
+  </table>
+  <h2>Attributes (click a square)</h2>
+  <div id='stats'></div>
+  <h2>Player locations</h2>
+<span style='color: #c2d8c0'>omd: (0, 0)</span><br><span style='color: #7a81af'>o: (-6, 2)</span><br><span style='color: #564ab1'>Aris: (-1, -1)</span><br><span style='color: #ad8a0e'>DFF: (0, 0)</span><br><span style='color: #a044de'>Quazie: (1, -1)</span><br><span style='color: #6504ba'>Publius Scribonius Scholasticus: (0, 0)</span><br><span style='color: #4ab3aa'>Gaelan: (-1, -1)</span><br><span style='color: #551b2d'>nichdel: (0, 0)</span><br><span style='color: #63a700'>Cuddle Beam: (-1, -1)</span><br><span style='color: #f705b8'>G.: (3, -1)</span><br><span style='color: #04271d'>Trigon: (1, 1)</span><br><span style='color: #51f44d'>Telnaior: (6, -1)</span><br><span style='color: #1e62a6'>Corona: (2, 1)</span><br><span style='color: #01cad2'>pokes: (0, 0)</span><br><span style='color: #73b885'>Murphy: (0, 0)</span><br><span style='color: #93136b'>VJ Rada: (0, 0)</span><br><span style='color: #0af057'>Kenyon: (-1, 1)</span><br><span style='color: #da84c9'>ATMunn: (1, 3)</span><br><span style='color: #3876b6'>Ouri: (0, 0)</span><br><span style='color: #1fc236'>Q*Bert: (0, 0)</span><br><span style='color: #5dbb66'>twg: (0, 0)</span><br>
+</body>

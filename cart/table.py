@@ -118,7 +118,7 @@ class Table:
 
     def update(self, change_str):
         changes = fractal.load(change_str)
-        for change in changes:
+        for change in enumerate(changes):
             command, pargs, args = change
 
             if command == "track": self.track(pargs[0], args)
