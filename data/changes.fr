@@ -28,7 +28,7 @@ batch: by Proposal 8014, date 2018-02-23, link business 31241
 	batch: type w
 		set -1 -2 
 		set -1 -1: pres true, fac mine, rank 1
-		set -1  0: pres true,
+		set -1  0: pres true
 		set  0 -2 
 		set  0 -1: pres true
 		set  1 -2 
@@ -186,7 +186,7 @@ batch: by o, date 2018-05-04, link business 31846
 	set 6 1: type b
 	move o: to 6 1
 report 2018-05-04
-register Q*Bert: date 2018-06-01
+register Q*Bert: date 2018-05-08
 batch: by o, date 2018-05-09, link business 31877
 	set 6 2: type b
 	move o: to 6 2
@@ -199,8 +199,10 @@ batch: by Agora, date 2018-05-12, link official 08866
 	set 2 -2: owner Corona
 	set 1 -3: owner Quazie
 	set 4  0: owner Trigon
+set 2 -1: owner G., by o, date 2018-05-20, link business 31898
 register twg: date 2018-05-24
 report 2018-05-31
+move Q*Bert: to 2 -1, by Agora, date 2018-05-31, link official 08885
 batch: fac null, by Agora, date 2018-06-01, link official 08888
 	set 0  2
 	set 2  1
@@ -281,4 +283,22 @@ batch: by Telnaior, date 2018-06-10, link business 31978
 		set  6 -3
 		set  6 -2
 		set  6 -1
-set 3 -1: owner G., by Agora, date 2018-06-11, link business 08907
+batch: by Agora, date 2018-06-11, link business 08907
+       set 3 -1: owner G.
+       set 6  0: owner Corona
+       set 5  0: owner twg
+report 2018-06-11
+move Q*Bert: to 3 0
+set 4 0: owner G., by Trigon, date 2018-06-12, link business 32006
+batch: date 2018-06-12, link business 32008
+	set 1 -3: owner Corona, by Quazie
+	set 1 -3: owner Trigon, by Corona
+set 2 -1: owner Corona, by G., date 2018-06-12, link business 32010
+batch: by twg, date 2018-06-12, link business 32016
+	move twg: to 5 0
+	set 5 0: fac orchard, rank 1
+batch: by Trigon, date 2018-06-12, link business 32017
+	move Trigon: to -1 -1
+	set -2 -1: type x
+	move Trigon: to 0 -2
+	set  0 -3: type x

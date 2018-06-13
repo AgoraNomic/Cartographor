@@ -10,6 +10,7 @@
   		width: 20px;
   		height: 20px;
   		border-color: darkgray;
+		text-align: center;
   	}
   	
   	.cell[type=a] {
@@ -17,16 +18,22 @@
   	}
   	
   	.cell[type=b] {
-  		background-color: black;
+		background-color: black;
+		color: white;
   	}
   	
   	.cell[type=w] {
   		background-color: white;
+		color: black;
   	}
 
   	.cell[type=g] {
   		background-color: gray;
   	}
+
+	#playerlist {
+		border-collapse: collapse;
+	}
   </style>
   <script>
   	var stats = {{attributes}};
@@ -57,5 +64,7 @@
   <h2>Attributes (click a square)</h2>
   <div id='stats'></div>
   <h2>Player locations</h2>
+  <table id='playerlist' border='1'>
 {{players}}
+  </table>
 </body>

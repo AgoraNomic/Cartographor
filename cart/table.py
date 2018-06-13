@@ -1,4 +1,4 @@
-from cart import fractal
+from cart import fractal, initials
 from hashlib import sha1
 
 class Table:
@@ -96,6 +96,13 @@ class Table:
                 try: self.data[row][col]
                 except: self.data[row].append({})
 
+    def update_initials(self):
+        pi = initials.create_initials([i for i, j in self.players.items()])
+
+        for name, player in self.players.items():
+            player["initial"] = pi[name]
+
+
     def register(self, name, args):
         # set full name if specified
         try: args["full"]
@@ -110,15 +117,19 @@ class Table:
 
         self.players[name] = args # add the object to the list of players
 
+        self.update_initials()
+
     def deregister(self, name):
         self.players.pop(name)
+
+        self.update_initials()
 
     def move(self, name, to):
         self.players[name]["location"] = to
 
     def update(self, change_str):
         changes = fractal.load(change_str)
-        for change in enumerate(changes):
+        for change in changes:
             command, pargs, args = change
 
             if command == "track": self.track(pargs[0], args)
