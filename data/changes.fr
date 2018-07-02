@@ -149,6 +149,7 @@ batch Corona: by Corona, date 2018-04-30, link 31808
 	move: to 0 1
 	move: to 0 2
 set 0 -2: fac null, rank 0, by Agora, date 2018-05-01
+set 2  2: owner Corona, by Agora, date 2018-05-03, link official 08852
 batch: by ATMunn, date 2018-05-04, link business 31833
        	batch ATMunn
 		move: to 0 -1
@@ -283,10 +284,12 @@ batch: by Telnaior, date 2018-06-10, link business 31978
 		set  6 -3
 		set  6 -2
 		set  6 -1
-batch: by Agora, date 2018-06-11, link business 08907
+batch: by Agora, date 2018-06-11, link official 08907
        set 3 -1: owner G.
        set 6  0: owner Corona
        set 5  0: owner twg
+       set 6  1: owner Murphy
+       set 6  2: owner Murphy
 report 2018-06-11
 move Q*Bert: to 3 0
 set 4 0: owner G., by Trigon, date 2018-06-12, link business 32006
@@ -302,3 +305,58 @@ batch: by Trigon, date 2018-06-12, link business 32017
 	set -2 -1: type x
 	move Trigon: to 0 -2
 	set  0 -3: type x
+move Trigon: to -1 1, by Trigon, date 2018-06-17, link business 32077
+batch: by Corona, date 2018-06-17, link business 32080
+	set 2 -1: fac mine, rank 2
+	set 2 -2: fac orchard, rank 2
+	set 1 -2: fac farm, rank 2
+	move Corona: to 1 -2
+batch: by Trigon, date 2018-06-17, link business 32082
+	move Trigon: to 0 -2
+	set 0 -2: fac mine, rank 1
+move Q*Bert: to 2 -1, by Agora, date 2018-06-21, link business 32123
+batch: by Agora, date 2018-06-21, link business 32125
+	batch: owner Corona
+		set  3  1
+		set -2  0
+		set -3  0
+	batch: owner G.
+		set  3 -2
+		set  4 -1
+batch: by G., date 2018-06-23, link business 32155
+	batch: fac mine, rank 1
+		set 3 -2
+		set 4 -1
+	batch: fac orchard, rank 1
+		set 4  0
+		set 3  0
+		set 2  0
+	move G.: to 2  0
+move G.: to 1 1, by G., date 2018-06-25, link business 32177
+batch: date 2018-06-29, link business 32193
+	move Corona: to 2 2, by Corona
+	move DFF: to -1 -1, by DFF
+batch: by Kenyon, date 2018-06-30, link business 32211
+	move Kenyon: to -1 2
+	set -1 2: fac mine, rank 1
+batch: date 2018-07-01, link business 32223
+	batch: by Corona
+		move Corona: to 3 1
+		set 3 1: fac loom, rank 1
+	batch: by DFF
+		set -2 0: fac orchard, rank 1
+		set -3 0: fac mine, rank 1
+		move DFF: to -3 0
+batch: by Kenyon, date 2018-07-01, link business 32227
+	set -1 2: rank 4
+	set  5 0: rank 4
+batch: by G., date 2018-07-01, link business 32232
+	set 3  0: rank 2
+	set 4  0: rank 3
+	set 4 -1: rank 3
+batch: owner Corona, by Agora, date 2018-07-02, link business 32240
+	set -2 -1
+	set  0 -3
+	set -4  0
+	set -5  0
+	set -6  0

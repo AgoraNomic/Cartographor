@@ -132,6 +132,8 @@ class Table:
         for change in changes:
             command, pargs, args = change
 
+            print(change)
+
             if command == "track": self.track(pargs[0], args)
             elif command == "untrack": self.untrack(pargs[0])
             elif command == "set": self.set(*pargs[0].split(), args)

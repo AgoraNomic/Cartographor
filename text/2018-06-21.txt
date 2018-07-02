@@ -1,0 +1,129 @@
+========================================================================
+THE MAP OF ARCADIA
+
+
+
+Previous:   Jun 13, 2018
+Revision 0: Jun 21, 2018
+
+View an interactive version of this report here:
+https://agoranomic.org/Cartographor/int/2018-06-21.html
+
+
+CARTOGRAPHOR'S NOTE
+========================================================================
+
+This report is purposefully wrong. The fountain self-ratified out of
+existence. Therefore, it needed to be recreated.
+
+
+
+MAPS
+========================================================================
+
+       LONGITUDE               LONGITUDE               LONGITUDE
+
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
+  -                 -     -                 -     -                 -
+  6  wwwwwwwbbbbbb  6     6  :::::::::::::  6     6  :::::::::::::  6
+  5  w.....w.....b  5     5  :.....:.....:  5     5  :.....:.....:  5
+  4  w.....w.....b  4     4  :.....:.....:  4     4  :.....:.....:  4
+  3  w.....w.....b  3  L  3  :.....:.....:  3  L  3  :.....:.....:  3
+  2  w....bw.....b  2  A  2  :....::.....:  2  A  2  :....::.....:  2
+  1  w...wwwbb...b  1  T  1  :...a###K...:  1  T  1  :...:1:2:...:  1
+  0  w..wwwgbb...b  0  I  0  :..:T###C...:  0  I  0  :..:D:0:6...:  0
+  1  w..wwwbbbw..b  1  T  1  :..TC###Au..:  1  T  1  :..:C3:4:5..:  1
+  2  w...wbbbb...b  2  U  2  :...CCGCC...:  2  U  2  :...BA:87...:  2
+  3  w...bbbb....b  3  D  3  :...:GG:....:  3  D  3  :...::::....:  3
+  4  w....bb.....b  4  E  4  :....:G.....:  4  E  4  :....::.....:  4
+  5  w.....b.....b  5     5  :.....t.....:  5     5  :.....9.....:  5
+  6  wwwwwwbbbbbbb  6     6  ::::::CMM::::  6     6  :::::::::::::  6
+  +                 +     +                 +     +                 +
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
+
+      LAND  TYPE               OWNERSHIP               FACILITIES
+   -----------------       -----------------        -----------------
+   aether        (.)       Agora                    Aether        (.)
+   white         (w)         Aether      (.)        Non-Aether    (:)
+   black         (b)         Non-Aether  (:)
+   gray          (g)         Preserved   (#)        See next section
+                           Gaelan        (a)        for key
+                           Kenyon        (K)
+                           Trigon        (T)
+                           Corona        (C)
+                           Aris          (A)
+                           ATMunn        (u)
+                           G.            (G)
+                           twg           (t)
+
+
+
+FACILITIES
+========================================================================
+
+ID   Land Unit   Description
+---------------------------------------------------------
+0    ( 0,  0)    The Fountain
+1    (-1, -1)    Preserved Rank 1 Mine
+2    (-1, +1)    Preserved Rank 1 Orchard
+3    (+1, -1)    Preserved Rank 1 Farm
+4    (+1, +1)    Preserved Rank 1 Mine
+5    (+1, +3)    Rank 1 Farm, owned by ATMunn
+6    ( 0, +2)    Rank 2 Refinery, owned by Corona
+7    (+2, +2)    Rank 2 Mine, owned by Corona
+8    (+2, +1)    Rank 2 Orchard, owned by Corona
+9    (+5,  0)    Rank 1 Orchard, owned by twg
+A    (+2, -1)    Rank 2 Mine, owned by Corona
+B    (+2, -2)    Rank 2 Orchard, owned by Corona
+C    (+1, -2)    Rank 2 Farm, owned by Corona
+D    ( 0, -2)    Rank 1 Mine, owned by Trigon
+
+
+
+LOCATIONS OF ENTITIES
+========================================================================
+
+Entity        Last report   This Report
+----------------------------------------
+omd           ( 0,  0)      ( 0,  0)
+o             (-6, +2)      (-6, +2)
+Aris          (-1, -1)      (-1, -1)
+DFF[1]        ( 0,  0)      ( 0,  0)
+Quazie        (-1, -2)      (+1, -1)
+P.S.S.[2]     ( 0,  0)      ( 0,  0)
+Gaelan        (-1, -1)      (-1, -1)
+Cuddle Beam   (-1, -1)      (-1, -1)
+G.            (+3, -1)      (+3, -1)
+Trigon        ( 0, -2)      ( 0, -2)
+Telnaior      (+6, -1)      (+6, -1)
+Corona        (+2, +1)      (+1, -2)
+pokes         ( 0,  0)      ( 0,  0)
+Murphy        ( 0,  0)      ( 0,  0)
+VJ Rada       ( 0,  0)      ( 0,  0)
+Kenyon        (-1, +1)      (-1, +1)
+ATMunn        (-1, +3)      (+1, +3)
+Ouri          ( 0,  0)      ( 0,  0)
+twg           (+5,  0)      (+5,  0)
+
+Q*Bert        (+3,  0)      (+2, -1)
+
+[1]: In Full, 天火狐
+[2]: In Full, Publius Scribonius Scholasticus
+
+
+
+ALTERNATING LAND TYPE
+========================================================================
+
+The alternating land type has been switched 0 times this week.
+The current value is Black.
+
+
+
+CHANGES IN LAND TYPE AND OWNERSHIP
+========================================================================
+
+Date         Unit       By      Change   From    To
+--------------------------------------------------------
+2018-06-17   (+6, +1)   Agora   owner    Agora   Murphy
+2018-06-17   (+6, +2)   Agora   owner    Agora   Murphy
