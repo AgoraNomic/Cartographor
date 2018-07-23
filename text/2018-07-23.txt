@@ -54,15 +54,15 @@ MAPS
    black         (b)         Non-Aether  (:)
    gray          (g)         Preserved   (#)        See next section
                            Gaelan        (a)        for key
-			   Trigon        (T)
+                           Trigon        (T)
                            Corona        (C)
                            Aris          (A)
                            ATMunn        (u)
                            G.            (G)
                            twg           (t)
-			   Murphy        (M)
-			   PSS[2]        (P)
-			   VJ Rada       (V)
+                           Murphy        (M)
+                           PSS[2]        (P)
+                           VJ Rada       (V)
 
 
 
@@ -106,7 +106,7 @@ LOCATIONS OF ENTITIES
 
 Entity        Last report   This Report
 ----------------------------------------
-omd           ( 0,  0)	    ( 0,  0)
+omd           ( 0,  0)      ( 0,  0)
 o             (-6, +2)      (-6, +2)
 Aris          (-1, -1)      (-1, -1)
 DFF[1]        ( 0,  0)      ( 0,  0)
@@ -125,7 +125,7 @@ Kenyon        (+1, +1)      (+1, +1)
 ATMunn        (+1, +3)      (+1, +3)
 Ouri          ( 0,  0)      ( 0,  0)
 twg           (+5,  0)      (+5,  0)
-		            
+                            
 Q*Bert        (+4, +1)      (+4, +1)
 
 
