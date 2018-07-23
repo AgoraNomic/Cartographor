@@ -1,25 +1,26 @@
 ========================================================================
 THE MAP OF ARCADIA
 
-Previous:   Jun 21, 2018
-Revision 0: Jul 2, 2018
-Revision 1: Jul 4, 2018
+Previous:   Jul 15, 2018
+Revision 0: Jul 23, 2018
 
-View an interactive version of this report here:
-https://agoranomic.org/Cartographor/int/2018-07-02.html
+View this report online...
+... as an interactive webpage:
+    https://agoranomic.org/Cartographor/int/2018-07-23.html
+... as a text file:
+    https://agoranomic.org/Cartographor/text/2018-07-23.txt
+
 
 
 CARTOGRAPHOR'S NOTE
 ========================================================================
 
-Changes from Revision 0
-------------------------------------------------------------------------
-
-1. Murphy Missing from Ownership Map Key
-2. G. is at (+4, -1)
-3. Facilities L and M are rank 2
-4. (-1, +2) belongs to twg
-5. ( 0, -3) belongs to Corona (not CoE'd, but fixed anyways)
+There is a new section: the Appendix. I will mostly use it to document
+name abbreviations instead of putting it in every section name
+abbreviations are used. Additionally, I want to use this section to
+apologise for slacking off last week on the auctions and Q*bert moving.
+A series of events caused me to put it off every day until it was Sunday
+and I realized I hadn't done anything. Again, sorry.
 
 
 
@@ -30,19 +31,19 @@ MAPS
 
    - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
   -                 -     -                 -     -                 -
-  6  wwwwwwwbbbbbb  6     6  ::::::C::::::  6     6  :::::::::::::  6
+  6  wwwwwwwbbbbbb  6     6  ::::AACPP::::  6     6  :::::::::::::  6
   5  w.....w.....b  5     5  :.....C.....:  5     5  :.....:.....:  5
   4  w.....w.....b  4     4  :.....C.....:  4     4  :.....:.....:  4
   3  w.....w.....b  3  L  3  :.....C.....:  3  L  3  :.....M.....:  3
   2  w....bw.....b  2  A  2  :....CC.....:  2  A  2  :....:L.....:  2
-  1  w...wwwbb...b  1  T  1  :...a###K...:  1  T  1  :...:1:2J...:  1
-  0  w..wwwgbb...b  0  I  0  :..:T###C...:  0  I  0  :..:D:0:6...:  0
-  1  w..wwwbbbw..b  1  T  1  :..TC###Au..:  1  T  1  :..:C3:4:5..:  1
+  1  w...wwwbb...b  1  T  1  :...a###t...:  1  T  1  :...:1:2J...:  1
+  0  w..wwwgbb...b  0  I  0  :..CT###C...:  0  I  0  :..:D:0:6...:  0
+  1  w..wwwbbbw..b  1  T  1  :..TC###Au..:  1  T  1  :..NC3:4:5..:  1
   2  w...wbbbb...b  2  U  2  :...CCGCC...:  2  U  2  :...BAI87...:  2
-  3  w...bbbb....b  3  D  3  :...GGGC....:  3  D  3  :...E:HK....:  3
-  4  w....bb.....b  4  E  4  :....GG.....:  4  E  4  :....FG.....:  4
+  3  w...bbbb....b  3  D  3  :...GGGC....:  3  D  3  :...EQHK....:  3
+  4  w....bbb....b  4  E  4  :....GG:....:  4  E  4  :....FG:....:  4
   5  w.....b.....b  5     5  :.....t.....:  5     5  :.....9.....:  5
-  6  wwwwwwbbbbbbb  6     6  ::::::CMM::::  6     6  :::::::::::::  6
+  6  wwwwwwbbbbbbb  6     6  :::::VCMM::::  6     6  :::::::OP::::  6
   +                 +     +                 +     +                 +
    - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
 
@@ -53,13 +54,15 @@ MAPS
    black         (b)         Non-Aether  (:)
    gray          (g)         Preserved   (#)        See next section
                            Gaelan        (a)        for key
-                           Kenyon        (K)
 			   Trigon        (T)
                            Corona        (C)
                            Aris          (A)
                            ATMunn        (u)
                            G.            (G)
                            twg           (t)
+			   Murphy        (M)
+			   PSS[2]        (P)
+			   VJ Rada       (V)
 
 
 
@@ -82,15 +85,19 @@ A    (+2, -1)    Rank 2 Mine, owned by Corona
 B    (+2, -2)    Rank 2 Orchard, owned by Corona
 C    (+1, -2)    Rank 2 Farm, owned by Corona
 D    ( 0, -2)    Rank 1 Mine, owned by Trigon
-E    (+3, -2)    Rank 1 Mine, owned by G.
+E    (+3, -2)    Rank 2 Mine, owned by G.
 F    (+4, -1)    Rank 3 Mine, owned by G.
 G    (+4,  0)    Rank 3 Orchard, owned by G.
-H    (+3,  0)    Rank 2 Orchard, owned by G.
-I    (+2,  0)    Rank 1 Orchard, owned by G.
+H    (+3,  0)    Rank 3 Mine, owned by G.
+I    (+2,  0)    Rank 3 Orchard, owned by G.
 J    (-1, +2)    Rank 4 Mine, owned by twg
 K    (+3, +1)    Rank 1 Loom, owned by Corona
-L    (-2,  0)    Rank 1 Orchard, owned by Corona
-M    (-3,  0)    Rank 1 Mine, owned by Corona
+L    (-2,  0)    Rank 2 Orchard, owned by Corona
+M    (-3,  0)    Rank 2 Mine, owned by Corona
+N    (+1, -3)    Rank 1 Loom, owned by Trigon
+O    (+6, +1)    Rank 1 Mine, owned by Murphy
+P    (+6, +2)    Rank 1 Orchard, owned by Murphy
+Q    (+3, -1)    Rank 5 Refinery, owned by G.
 
 
 
@@ -100,29 +107,26 @@ LOCATIONS OF ENTITIES
 Entity        Last report   This Report
 ----------------------------------------
 omd           ( 0,  0)	    ( 0,  0)
-o             (-6, +2)      (-6,  2)
+o             (-6, +2)      (-6, +2)
 Aris          (-1, -1)      (-1, -1)
 DFF[1]        ( 0,  0)      ( 0,  0)
 Quazie        (+1, -1)      (+1, -1)
-P.S.S.[2]     ( 0,  0)      ( 0,  0)
+PSS[2]        ( 0,  0)      ( 0,  0)
 Gaelan        (-1, -1)      (-1, -1)
 Cuddle Beam   (-1, -1)      (-1, -1)
-G.            (+3, -1)      (+1, +1)
-Trigon        ( 0, -2)      ( 0, -2)
+G.            (+3, -1)      (+3, -1)
+Trigon        (+1, -3)      (+1, -3)
 Telnaior      (+6, -1)      (+6, -1)
-Corona        (+1, -2)      (+3, +1)
+Corona        (+3, +1)      (+3, +1)
 pokes         ( 0,  0)      ( 0,  0)
-Murphy        ( 0,  0)      ( 0,  0)
+Murphy        (+6, +2)      (+6, +2)
 VJ Rada       ( 0,  0)      ( 0,  0)
-Kenyon        (-1, +1)      (-1, +2)
+Kenyon        (+1, +1)      (+1, +1)
 ATMunn        (+1, +3)      (+1, +3)
 Ouri          ( 0,  0)      ( 0,  0)
 twg           (+5,  0)      (+5,  0)
 		            
-Q*Bert        (+2, -1)      (+3,  0)
-
-[1]: In Full, 天火狐
-[2]: In Full, Publius Scribonius Scholasticus
+Q*Bert        (+4, +1)      (+4, +1)
 
 
 
@@ -137,15 +141,23 @@ The current value is Black.
 CHANGES IN LAND TYPE AND OWNERSHIP
 ========================================================================
 
-Date         Unit       By      Change   From    To
---------------------------------------------------------
-2018-06-21   (+3, +1)   Agora   owner    Agora   Corona
-2018-06-21   (+3, -2)   Agora   owner    Agora   G.
-2018-06-21   (+4, -1)   Agora   owner    Agora   G.
-2018-06-21   (-2,  0)   Agora   owner    Agora   Corona
-2018-06-21   (-3,  0)   Agora   owner    Agora   Corona
-2018-07-02   (-2, -1)   Agora   owner    Agora   Corona
-2018-07-02   ( 0, -3)   Agora   owner    Agora   Corona
-2018-07-02   (-4,  0)   Agora   owner    Agora   Corona
-2018-07-02   (-5,  0)   Agora   owner    Agora   Corona
-2018-07-02   (-6,  0)   Agora   owner    Agora   Corona
+Date         Unit       By   Change   From   To
+-----------------------------------------------------
+2018-07-17   (-6, -1)   G.   owner    G.     Aris
+2018-07-17   (-6, -2)   G.   owner    G.     Aris
+2018-07-17   (-6, +1)   G.   owner    G.     PSS[1]
+2018-07-17   (-6, +2)   G.   owner    G.     PSS[1]
+2018-07-22   (+6, -1)   G.   owner    G.     VJ Rada
+
+
+
+APPENDIX
+========================================================================
+
+[1]: DFF is short for 天火狐
+[2]: PSS is short for Publius Scribonius Scholasticus
+
+
+
+END OF THE MAP OF ARCADIA
+========================================================================
