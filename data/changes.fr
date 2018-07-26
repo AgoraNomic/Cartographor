@@ -397,4 +397,5 @@ batch: by G., date 2018-07-17, link business 32391
 	set -6  2: owner PSS
 move G.: to 3 -1, by G., date 2018-07-22, link business 32403
 set 6 -1: owner VJ, by G., date 2018-07-22, link business 32404
+move Kenyon: to -1 2, by Kenyon, date 2018-07-22, link business 32409
 move G.: to 3 -1, by G., date 2018-07-22, link business 32414
