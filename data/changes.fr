@@ -405,9 +405,15 @@ set 6 -1: owner VJ, by G., date 2018-07-22, link business 32404
 move Kenyon: to -1 2, by Kenyon, date 2018-07-22, link business 32409
 move G.: to 3 -1, by G., date 2018-07-22, link business 32414
 report 2018-07-23
-batch: type b, by Q*Bert
-	set 3 2: date 2018-07-23, link official 08970
-	set 4 3: date 2018-07-31, link official 08982
+batch: by Q*Bert, date 2018-07-23, link official 08970
+	set 3 2: type b
+	move Q*Bert: to 2 3
+batch: rank 1, by Proposal 8067, date 2018-07-26, link official 08973
+	set 0  2
+	set 3  1
+	set 3 -1
+batch: by Q*Bert, date 2018-07-31, link official 08982
+	set 4 3
 	move Q*Bert: to 4 3
 batch: date 2018-07-31, link business 32463
 	batch: by Agora, owner Kenyon
