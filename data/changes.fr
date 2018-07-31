@@ -376,6 +376,11 @@ batch: by Murphy, date 2018-07-08, link business 32302
 	set 6 1: fac mine, rank 1
 	set 6 2: fac orchard, rank 1
 	move Murphy: to 6 2
+batch: date 2018-07-08, link business 32312
+	set 0 2: rank 5, by Corona
+	batch: fac orchard, rank 3, by DFF
+		set -4 0
+		set -5 0
 batch: owner G., by Agora, date 2018-07-10, link official 08943
 	set -6 -1
 	set -6  1
@@ -399,3 +404,16 @@ move G.: to 3 -1, by G., date 2018-07-22, link business 32403
 set 6 -1: owner VJ, by G., date 2018-07-22, link business 32404
 move Kenyon: to -1 2, by Kenyon, date 2018-07-22, link business 32409
 move G.: to 3 -1, by G., date 2018-07-22, link business 32414
+report 2018-07-23
+batch: type b, by Q*Bert
+	set 3 2: date 2018-07-23, link official 08970
+	set 4 3: date 2018-07-31, link official 08982
+	move Q*Bert: to 4 3
+batch: date 2018-07-31, link business 32463
+	batch: by Agora, owner Kenyon
+		set 6  3
+		set 6 -3
+	batch: by Kenyon, owner twg
+		set 6  3
+		set 6 -3
+report 2018-07-31
