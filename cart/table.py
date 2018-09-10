@@ -141,6 +141,9 @@ class Table:
             elif command == "register": self.register(pargs[0], args)
             elif command == "deregister": self.deregister(pargs[0])
             elif command == "move": self.move(pargs[0], args["to"])
+            elif command == "mvset":
+                self.set(*pargs[1].split(), args)
+                self.move(pargs[0], pargs[1])
             else: pass
 
     def fill_cell(self, lat, lon):

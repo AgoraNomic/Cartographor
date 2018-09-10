@@ -423,3 +423,46 @@ batch: date 2018-07-31, link business 32463
 		set 6  3
 		set 6 -3
 report 2018-07-31
+set 4 1: owner G., by Agora, date 2018-07-31, link business 32482
+set 4 3: type b, by Q*Bert, date 2018-08-01, link official 08982
+batch: date 2018-08-01, by twg
+	batch: link business 32486
+		set 5 -1: owner twg, type w, fac loom
+		move twg: to 5 -1
+	batch: link business 32487
+		move twg: to 6 -3
+		set 6 -3: fac refinery, rank 1
+move Murphy: to 6 1, by Murphy, date 2018-08-02, link business 32491
+batch: type x, by twg, date 2018-08-02, link business 32492
+	set  0  3
+	set  0 -4
+	set  0  4
+	set  0 -5
+	set -1 -3
+	set -1  3
+batch: owner Corona, by Agora, date 2018-08-05, link business 32503
+	set -6  3
+	set -6 -3
+batch: by twg, date 2018-08-06
+	set -1 2: rank 5, link business 32504
+	batch: link business 32505
+		move twg: to 5 0
+		set 5 0: rank 5
+batch: by Murphy, date 2018-08-11, link business 32518
+	set 5 1: type b, fac farm, rank 1
+	move Murphy: to 5 1
+set 4 3: owner Trigon, by Agora, date 2018-08-16, link business 32528
+batch: by Q*Bert, date 2018-08-16, link official 08998
+	move Q*Bert: to 5 4
+	set 5 4: type b
+batch: by twg, date 2018-08-23, link business 32535
+	set 6 -2: fac farm, rank 5
+	move twg: to 6 -2
+register DMargaux: date 2018-08-25, full D. Margaux
+batch: by DMargaux, date 2018-08-29, link business 32568
+	move DMargaux: to -1 1
+	mvset DMargaux, -2 1: type b, owner DMargaux, fac farm, rank 1
+mvset DMargaux, -2 2: type b, owner DMargaux, fac mine, rank 1, by DMargaux, date 2018-09-01, link business 32577
+batch: date 2018-09-09, link business 32594
+	move nichdel: to 1 1, by nichdel
+	set -2 2: rank 2, by DMargaux
