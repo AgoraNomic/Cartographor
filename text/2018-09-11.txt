@@ -1,0 +1,205 @@
+========================================================================
+THE MAP OF ARCADIA
+
+Previous:   Jul 31, 2018
+Revision 0: Sep 10, 2018
+Revision 1: Sep 11, 2018
+
+View this report online...
+... as an interactive webpage:
+    https://agoranomic.org/Cartographor/int/2018-09-11.html
+... as a text file:
+    https://agoranomic.org/Cartographor/text/2018-09-11.txt
+
+
+
+CARTOGRAPHOR'S NOTE
+========================================================================
+
+Notes on Revision 0
+------------------------------------------------------------------------
+
+So we had a facility deletion party. That's fun. The facilities priorly
+given the IDs of E-I, N, and S have been destroyed. Also twg's loom at
+(+5, -1).
+
+
+Notes on Revision 1
+------------------------------------------------------------------------
+
+- G. owns nothing (CoE'd by G.)
+- nichdel has a location (CoE'd by D. Margaux)
+- twg's changes to (+5, -1) were effective (CoE'd by twg)
+- Corona's loom does not exist (CoE'd by twg)
+- D. Margaux's name is on the ownership list (CoE'd by D. Margaux)
+
+
+
+MAPS
+========================================================================
+
+       LONGITUDE               LONGITUDE               LONGITUDE
+
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
+  -                 -     -                 -     -                 -
+  6  wwwwwwwbbbbbb  6     6  :::CAACPPC:::  6     6  :::::::::::::  6
+  5  w.....w.....b  5     5  :.....C.....:  5     5  :.....K.....:  5
+  4  w.....w.....b  4     4  :.....C.....:  4     4  :.....J.....:  4
+  3  w.....wb....b  3  L  3  :.....Cr....:  3  L  3  :.....G:....:  3
+  2  w....bwbb...b  2  A  2  :....CCrr...:  2  A  2  :....:FPQ...:  2
+  1  w..bwwwbbw..b  1  T  1  :..:a###t:..:  1  T  1  :..::1:2E:..:  1
+  0  wwwwwwgbbbb.b  0  I  0  :::CT###C::.:  0  I  0  ::::D:0:6::.:  0
+  1  w..wwwbbbw..b  1  T  1  :..TC###Au..:  1  T  1  :..:C3:4:5..:  1
+  2  w...wbbbb...b  2  U  2  :...CCMCC...:  2  U  2  :...BA:87...:  2
+  3  w...bbbbb...b  3  D  3  :...MMMC:...:  3  D  3  :...:::::...:  3
+  4  w....bbb.b..b  4  E  4  :....MMM.T..:  4  E  4  :....:::.:..:  4
+  5  w....gbb..b.b  5     5  :....#t:..:.:  5     5  :....L9N..:.:  5
+  6  wwwwwwbbbbbbb  6     6  :::t:VCMMt:::  6     6  :::MO::HI::::  6
+  +                 +     +                 +     +                 +
+   - 6543210123456 +       - 6543210123456 +       - 6543210123456 +
+
+      LAND  TYPE               OWNERSHIP               FACILITIES
+   -----------------       -----------------        -----------------
+   aether        (.)       Agora                    Aether        (.)
+   white         (w)         Aether      (.)        Non-Aether    (:)
+   black         (b)         Non-Aether  (:)
+   gray          (g)         Preserved   (#)        See next section
+                           Gaelan        (a)        for key
+                           Trigon        (T)
+                           Corona        (C)
+                           Aris          (A)
+                           ATMunn        (u)
+                           G.            (G)
+                           twg           (t)
+                           Murphy        (M)
+                           PSS[2]        (P)
+                           VJ Rada       (V)
+			   D. Margaux    (r)
+
+
+
+FACILITIES
+========================================================================
+
+Ranks are only listed for facilites where that information is relevant.
+Empty rank fields are to be interpreted as the default value.
+
+ID     Land Unit   R   Type       Owner        Notes
+---------------------------------------------------------
+0->0   ( 0,  0)        Fountain   Agora        Preserved
+1->1   (-1, -1)    1   Mine       Agora        Preserved
+2->2   (-1, +1)    1   Orchard    Agora        Preserved
+3->3   (+1, -1)    1   Farm       Agora        Preserved
+4->4   (+1, +1)    1   Mine       Agora        Preserved
+5->5   (+1, +3)    1   Farm       ATMunn
+6->6   ( 0, +2)        Refinery   Corona
+7->7   (+2, +2)    2   Mine       Corona
+8->8   (+2, +1)    2   Orchard    Corona
+9->9   (+5,  0)    4   Orchard    twg
+A->A   (+2, -1)    2   Mine       Corona
+B->B   (+2, -2)    2   Orchard    Corona
+C->C   (+1, -2)    2   Farm       Corona
+D->D   ( 0, -2)    1   Mine       Trigon
+J->E   (-1, +2)    4   Mine       twg
+L->F   (-2,  0)    2   Orchard    Corona
+M->G   (-3,  0)    2   Mine       Corona
+O->H   (+6, +1)    1   Mine       Murphy
+P->I   (+6, +2)    1   Orchard    Murphy
+Q->J   (-4,  0)    3   Orchard    Corona
+R->K   (-5,  0)    3   Orchard    Corona
+ ->L   (+5, -1         Loom                    Preserved
+ ->M   (+6, -3)        Refinery   twg
+ ->N   (+5, +1)    1   Farm       Murphy
+ ->O   (+6, -2)    5   Farm       twg
+ ->P   (-2, +1)    1   Farm       D. Margaux
+ ->Q   (-2, +2)    2   Mine       D. Margaux   
+
+IDs are formatted as such: (ID as of last report)->(ID as of this
+report). This format will only show up if facilities are destroyed.
+
+
+
+LOCATIONS OF ENTITIES
+========================================================================
+
+Entity        Last report   This report
+----------------------------------------
+omd           ( 0,  0)      ( 0,  0)
+o             (-6, +2)      (-6, +2)
+Aris          (-1, -1)      (-1, -1)
+DFF[1]        ( 0,  0)      (-3,  0)
+Quazie        (+1, -1)      (+1, -1)
+PSS[2]        ( 0,  0)      ( 0,  0)
+Gaelan        (-1, -1)      (-1, -1)
+nichdel       ( 0,  0)      (+1, +1)
+Cuddle Beam   (-1, -1)      (-1, -1)
+G.            (+3, -1)      (+3, -1)
+Trigon        (+1, -3)      (+1, -3)
+Telnaior      (+6, -1)      (+6, -1)
+Corona        (+3, +1)      (+3, +1)
+pokes         ( 0,  0)      ( 0,  0)
+Murphy        (+6, +2)      (+5, +1)
+VJ Rada       ( 0,  0)      ( 0,  0)
+Kenyon        (-1, +2)      (-1, +2)
+ATMunn        (+1, +3)      (+1, +3)
+Ouri          ( 0,  0)      ( 0,  0)
+twg           (+5,  0)      (+6, -2)
+D. Margaux                  (-2, +2)
+                            
+Q*Bert        (+4, +3)      (+5, +4)
+
+
+
+ALTERNATING LAND TYPE
+========================================================================
+
+The alternating land type has been switched 6 times this week.
+The current value is Black.
+
+
+
+CHANGES IN LAND TYPE AND OWNERSHIP
+========================================================================
+
+Date         Unit       By        Change   From     To
+-----------------------------------------------------------
+2018-07-31   (+4, +1)   Agora     owner    Agora    G.
+2018-08-01   (+4, +3)   Q*Bert    type     aether   black
+2018-08-01   (+5, +1)   twg       type     aether   white
+2018-08-01   ( 0, +3)   twg       type     aether   black
+2018-08-01   ( 0, -4)   twg       type     aether   white
+2018-08-01   ( 0, +4)   twg       type     aether   black
+2018-08-01   ( 0, -5)   twg       type     aether   white
+2018-08-01   (-1, -3)   twg       type     aether   black
+2018-08-01   (-1, +3)   twg       type     aether   white
+2018-08-05   (-6, +3)   Agora     owner    Agora    Corona
+2018-08-05   (-6, -3)   Agora     owner    Agora    Corona
+2018-08-06   (+5, -1)   twg       type     aether   gray
+                        twg       owner    twg      Agora
+2018-08-15   (+2,  0)   G.        owner    G.       Murphy
+2018-08-15   (+3, -2)   G.        owner    G.       Murphy
+2018-08-15   (+3, -1)   G.        owner    G.       Murphy
+2018-08-15   (+3,  0)   G.        owner    G.       Murphy
+2018-08-15   (+4, -1)   G.        owner    G.       Murphy
+2018-08-15   (+4,  0)   G.        owner    G.       Murphy
+2018-08-15   (+4, +1)   G.        owner    G.       Murphy
+2018-08-16   (+4, +3)   Agora     owner    Agora    Trigon
+2018-08-23   (+5, +4)   Q*Bert    type     aether   black
+2018-08-29   (-2, +1)   DMX[3]    type     aether   black
+                        DMX[3]    owner    Agora    DMX[3]
+2018-09-01   (-2, +2)   DMX[3]    type     aether   black
+                        DMX[3]    owner    Agora    DMX[3]
+
+
+
+APPENDIX
+========================================================================
+
+[1]: DFF is short for 天火狐
+[2]: PSS is short for Publius Scribonius Scholasticus
+[3]: DMX is short for D. Margaux
+
+
+
+END OF THE MAP OF ARCADIA
+========================================================================

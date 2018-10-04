@@ -446,11 +446,22 @@ batch: owner Corona, by Agora, date 2018-08-05, link business 32503
 batch: by twg, date 2018-08-06
 	set -1 2: rank 5, link business 32504
 	batch: link business 32505
+		set 5 -1: type g, pres true
 		move twg: to 5 0
 		set 5 0: rank 5
+report 2018-09-10
+set -3 1: owner DMargaux, type b, by self-ratification, date 2018-09-10, link official 09024
 batch: by Murphy, date 2018-08-11, link business 32518
 	set 5 1: type b, fac farm, rank 1
 	move Murphy: to 5 1
+batch: owner Murphy, by G., date 2018-08-15, link 32526
+	set 2  0
+	set 3 -2
+	set 3 -1
+	set 3  0
+	set 4 -1
+	set 4  0
+	set 4  1
 set 4 3: owner Trigon, by Agora, date 2018-08-16, link business 32528
 batch: by Q*Bert, date 2018-08-16, link official 08998
 	move Q*Bert: to 5 4
@@ -466,3 +477,51 @@ mvset DMargaux, -2 2: type b, owner DMargaux, fac mine, rank 1, by DMargaux, dat
 batch: date 2018-09-09, link business 32594
 	move nichdel: to 1 1, by nichdel
 	set -2 2: rank 2, by DMargaux
+report 2018-09-10
+batch: date 2018-09-10
+	batch: by twg, link business 32609
+		set 6 3: fac farm, rank 5
+		set 5 3: type x
+		set 5 2: type x
+		move twg: to 1 -1
+	batch: by Kenyon, link business 32614
+		set 5 -2: type x
+		move Kenyon: to 6 -3
+		set 5 -3: type x
+batch: by twg, date 2018-09-12, link business 32622
+	set -2 -2: type x
+	set -3 -1: type x
+	set -2  3: type x
+	move twg: to -2 2
+	set -3  2: type x
+report 2018-09-22
+mvset Q*Bert, 4 5: type b, by Q*Bert, date 2018-09-22, link official 09047
+batch: date 2018-09-22, link 32674
+	set -1  3: owner DMargaux
+	set -1 -3: owner nichdel
+	set -1 -3: owner DMargaux
+move nichdel: to -2 1, by nichdel, date 2018-09-28, link business 32706
+batch: owner DMargaux, by Corona, date 2018-09-28, link business 32709
+	set -6 -3
+	set -6  0
+	set -6  3
+	set -5  0
+	set -4  0
+	set -3  0
+	set -2 -1
+	set -2  0
+	set  0 -3
+	set  0  2
+	set  1 -2
+	set  2 -2
+	set  2 -1
+	set  2  1
+	set  2  2
+	set  3  1
+	set  6  0
+batch: date 2018-09-28, link business 32714
+	set 0 3: owner twg, by Agora
+	set 0 4: owner Kenyon, by Agora
+	set 0 4: owner twg, by Kenyon
+move DMargaux: to 0 2, by DMargaux, date 2018-09-29, link business 32720
+move DMargaux: to -5 0, by DMargaux, date 2018-09-29, link business 32727
